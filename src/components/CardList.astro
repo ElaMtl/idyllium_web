@@ -1,0 +1,19 @@
+---
+interface Props {
+    title: string;
+    descriptions: string[];
+}
+const { title, descriptions } = Astro.props;
+import bgOverlay from "@/images/bg-overlay.png";
+---
+
+<div
+    class="bg-[#CBA76B] py-4 px-10 shadow-2xl rounded-md bg-repeat"
+    style=`background-image: url('${bgOverlay.src}')`
+>
+    <h4>{title}</h4>
+    <div class="hidden lg:block w-full h-[1px] bg-white my-4"></div>
+    <ul class="list-disc list-inside text-xl font-extralight text-left">
+        {descriptions.map((description) => <li>{description}</li>)}
+    </ul>
+</div>

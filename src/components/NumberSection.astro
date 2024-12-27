@@ -1,0 +1,36 @@
+---
+interface Step {
+    src: any;
+    alt: string;
+    number: number;
+    description: string;
+}
+
+interface Props {
+    steps: Step[];
+}
+const { steps } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<div
+    class={`my-10 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${steps.length === 3 ? "3" : "4"} gap-8`}
+>
+    {
+        steps.map((step) => (
+            <div class="text-center">
+                <Image
+                    class="inline-block h-48 object-contain"
+                    src={step.src}
+                    alt={step.alt}
+                />
+                <h1 class="text-6xl font-semibold italic my-4 text-yellow-500">
+                    {step.number}
+                </h1>
+                <p class="text-lg text-muted-foreground uppercase">
+                    {step.description}
+                </p>
+            </div>
+        ))
+    }
+</div>

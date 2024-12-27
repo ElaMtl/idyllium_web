@@ -1,0 +1,20 @@
+---
+interface Props {
+    src: any;
+    alt: string;
+    title: string;
+}
+const { src, alt, title } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<div class="relative text-white hover:text-border group">
+    <Image class="w-full rounded-md" src={src} alt={alt} />
+    <div
+        class="absolute inset-x-0 bottom-0 bg-gradient-to-b from-transparent via-transparent to-[#B68E3FBD] opacity-80 group-hover:opacity-95 rounded-b-md h-[90%]"
+    >
+    </div>
+    <h2 class="absolute bottom-0 left-0 p-4 font-antic uppercase text-2xl">
+        {title}
+    </h2>
+</div>

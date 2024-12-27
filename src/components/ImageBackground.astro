@@ -1,0 +1,22 @@
+---
+interface Props {
+    src: any;
+    alt: string;
+}
+const { src, alt } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<div class="relative inline-block">
+    <div class="relative">
+        <div
+            class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+        >
+        </div>
+        <Image
+            class="relative object-contain bg-border"
+            src={src}
+            alt={alt}
+        />
+    </div>
+</div>

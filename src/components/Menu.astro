@@ -1,0 +1,400 @@
+---
+const { headerItems } = Astro.props;
+import Image from "astro/components/Image.astro";
+import logo_light from "@/images/logo_light.png";
+---
+
+<header class="z-50 font-robotoSlab absolute w-full pt-7 xl:px-24">
+    <nav class="relative">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <!-- Logo Section -->
+            <a href="/" aria-label="Home">
+                <Image
+                    class="hidden sm:block h-24 object-contain w-auto"
+                    src={logo_light}
+                    alt="logo"
+                />
+            </a>
+
+            <!-- Desktop Navigation Items -->
+            <div class="hidden lg:flex items-center">
+                {
+                    headerItems.map((item, index) => (
+                        <div class="relative" data-index={index}>
+                            {item.href ? (
+                                <a
+                                    href={item.href}
+                                    class="py-4 px-2 text-white font-raleway font-thin uppercase whitespace-nowrap text-md hover:text-yellow-500 transition duration-300"
+                                >
+                                    {item.triggerName}
+                                </a>
+                            ) : (
+                                <button
+                                    data-dropdown={item.triggerName}
+                                    class="py-4 px-2 text-white font-raleway font-thin uppercase whitespace-nowrap text-md hover:text-yellow-500 transition duration-300 flex items-center"
+                                >
+                                    {item.triggerName}
+                                    {item.elements && (
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="ml-1 h-4 w-4"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M19 9l-7 7-7-7"
+                                            />
+                                        </svg>
+                                    )}
+                                </button>
+                            )}
+                        </div>
+                    ))
+                }
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button
+                data-toggle="menu"
+                class="lg:hidden outline-none mobile-menu-button"
+                aria-label="Toggle menu"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    ><path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path></svg
+                >
+            </button>
+        </div>
+
+        <!-- Desktop Dropdowns -->
+        <div id="dropdownContainer" class="hidden lg:block relative">
+            {
+                headerItems.map((item) => (
+                    <div
+                        id={`dropdown-${item.triggerName}`}
+                        class="hidden absolute right-0"
+                    >
+                        <div class="bg-black/90 backdrop-blur-sm border border-white/10 rounded-lg shadow-xl max-h-[70vh] overflow-y-auto">
+                            <div
+                                class="p-4"
+                                style={{
+                                    display: "grid",
+                                    gridTemplateColumns:
+                                        "repeat(1, minmax(180px, 1fr))",
+                                    gap: "1rem",
+                                    maxWidth: "calc(100vw - 2rem)",
+                                    width: "content-fit",
+                                }}
+                            >
+                                {item.elements?.map((el) => (
+                                    <a
+                                        href={el.href}
+                                        class={`text-md text-white uppercase ${
+                                            el.label
+                                                ? "font-raleway font-semibold text-lg col-span-4 border-b border-white/20 pb-2"
+                                                : "font-raleway"
+                                        } hover:text-yellow-500 transition duration-300`}
+                                        style={{
+                                            gridColumn: el.label
+                                                ? "span 4"
+                                                : "span 1",
+                                        }}
+                                    >
+                                        {el.label || el.item}
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+
+        <!-- Mobile Menu - Removed sticky header -->
+        <div id="mobileMenu" class="lg:hidden hidden fixed inset-0 z-50">
+            <div class="absolute inset-0 bg-black/90 backdrop-blur-sm">
+                <div class="h-screen overflow-y-auto">
+                    <!-- Header with close button - removed sticky positioning -->
+                    <div
+                        class="bg-black/90 backdrop-blur-sm border-b border-white/10 flex justify-between items-center p-4"
+                    >
+                        <a href="/" aria-label="Home">
+                            <Image
+                                class="h-16 object-contain w-auto"
+                                src={logo_light}
+                                alt="logo"
+                            />
+                        </a>
+                        <button
+                            data-toggle="menu"
+                            class="p-2 hover:bg-white/10 rounded-lg transition-colors duration-300"
+                            aria-label="Close menu"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 text-white"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Menu content -->
+                    <div class="p-4">
+                        {
+                            headerItems.map((item) => (
+                                <div class="relative">
+                                    {item.href ? (
+                                        <a
+                                            href={item.href}
+                                            class="block py-2 px-4 text-white font-raleway font-thin uppercase text-md hover:text-yellow-500 transition duration-300"
+                                        >
+                                            {item.triggerName}
+                                        </a>
+                                    ) : (
+                                        <div class="relative">
+                                            <button
+                                                data-dropdown={item.triggerName}
+                                                class="w-full text-left block py-2 px-4 text-white font-raleway font-thin uppercase text-md hover:text-yellow-500 transition duration-300 flex justify-between items-center"
+                                            >
+                                                {item.triggerName}
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="ml-1 h-4 w-4 transform transition-transform duration-300"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M19 9l-7 7-7-7"
+                                                    />
+                                                </svg>
+                                            </button>
+                                            {item.elements && (
+                                                <div
+                                                    id={`mobileDropdown-${item.triggerName}`}
+                                                    class="hidden"
+                                                >
+                                                    {item.elements.map((el) => (
+                                                        <a
+                                                            href={el.href}
+                                                            class={`block py-2 px-4 text-white uppercase ${
+                                                                el.label
+                                                                    ? "font-raleway font-semibold text-lg uppercase border-b border-white/10"
+                                                                    : "pl-8 text-md font-raleway"
+                                                            } hover:text-yellow-500 transition duration-300`}
+                                                        >
+                                                            {el.label ||
+                                                                el.item}
+                                                        </a>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Mobile menu handling
+        const mobileMenuButton = document.querySelector('[data-toggle="menu"]');
+        const mobileMenu = document.getElementById("mobileMenu");
+        let scrollPosition = 0;
+
+        const toggleMobileMenu = () => {
+            const isMenuHidden = mobileMenu?.classList.contains("hidden");
+
+            if (isMenuHidden) {
+                // Opening the menu
+                scrollPosition = window.scrollY;
+                document.body.style.position = "fixed";
+                document.body.style.top = `-${scrollPosition}px`;
+                document.body.style.width = "100%";
+            } else {
+                // Closing the menu
+                document.body.style.position = "";
+                document.body.style.top = "";
+                document.body.style.width = "";
+                window.scrollTo(0, scrollPosition);
+            }
+
+            mobileMenu?.classList.toggle("hidden");
+        };
+
+        // Handle both open and close buttons
+        document.querySelectorAll('[data-toggle="menu"]').forEach((button) => {
+            button.addEventListener("click", toggleMobileMenu);
+        });
+
+        // Dropdown handling
+        const buttons = document.querySelectorAll("[data-dropdown]");
+        let activeDropdown = null;
+
+        const positionDropdown = (button, dropdown) => {
+            const isMobile = window.innerWidth < 1024; // lg breakpoint
+
+            if (!isMobile) {
+                const buttonRect = button.getBoundingClientRect();
+
+                // Position dropdown exactly below the button
+                dropdown.style.left = `${buttonRect.left - 100}px`;
+                dropdown.style.top = `${buttonRect.bottom - 120}px`; // 8px gap between button and dropdown
+
+                // Ensure dropdown doesn't overflow viewport on the right
+                const dropdownRect = dropdown.getBoundingClientRect();
+                if (dropdownRect.right > window.innerWidth) {
+                    const overflow = dropdownRect.right - window.innerWidth;
+                    dropdown.style.left = `${buttonRect.left - overflow - 20}px`; // 20px padding from right edge
+                }
+
+                // Ensure dropdown doesn't overflow viewport on the bottom
+                if (dropdownRect.bottom > window.innerHeight) {
+                    // Position above the button instead
+                    dropdown.style.top = `${buttonRect.top - dropdownRect.height - 8}px`;
+                }
+            }
+        };
+
+        buttons.forEach((button) => {
+            button.addEventListener("click", (e) => {
+                e.stopPropagation();
+                const dropdownName = button.getAttribute("data-dropdown");
+                const isMobile = button.closest("#mobileMenu");
+                const dropdown = document.getElementById(
+                    `${isMobile ? "mobileDropdown-" : "dropdown-"}${dropdownName}`
+                );
+
+                if (activeDropdown && activeDropdown !== dropdown) {
+                    activeDropdown.classList.add("hidden");
+                    const previousButton = document.querySelector(
+                        `[data-dropdown="${activeDropdown.id.replace("mobileDropdown-", "").replace("dropdown-", "")}"]`
+                    );
+                    const previousArrow = previousButton?.querySelector("svg");
+                    if (previousArrow) {
+                        previousArrow.style.transform = "rotate(0deg)";
+                    }
+                }
+
+                dropdown.classList.toggle("hidden");
+
+                if (!dropdown.classList.contains("hidden") && !isMobile) {
+                    positionDropdown(button, dropdown);
+                }
+
+                activeDropdown = dropdown.classList.contains("hidden")
+                    ? null
+                    : dropdown;
+
+                // Rotate arrow
+                const arrow = button.querySelector("svg");
+                if (arrow) {
+                    arrow.style.transform = dropdown.classList.contains(
+                        "hidden"
+                    )
+                        ? "rotate(0deg)"
+                        : "rotate(180deg)";
+                }
+            });
+        });
+
+        // Close dropdowns on outside click
+        document.addEventListener("click", (e) => {
+            const isDropdownTrigger = (e.target as Element).closest(
+                "[data-dropdown]"
+            );
+            const isDropdown = (e.target as Element).closest(
+                "[id^='dropdown-'], [id^='mobileDropdown-']"
+            );
+            const isMobileMenuToggle = (e.target as Element).closest(
+                '[data-toggle="menu"]'
+            );
+
+            if (isMobileMenuToggle) return;
+
+            if (!isDropdownTrigger && !isDropdown && activeDropdown) {
+                activeDropdown.classList.add("hidden");
+                const button = document.querySelector(
+                    `[data-dropdown="${activeDropdown.id.replace("mobileDropdown-", "").replace("dropdown-", "")}"]`
+                );
+                const arrow = button?.querySelector("svg");
+                if (arrow) {
+                    arrow.style.transform = "rotate(0deg)";
+                }
+                activeDropdown = null;
+            }
+        });
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener("resize", () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                if (activeDropdown && !activeDropdown.id.includes("mobile")) {
+                    const button = document.querySelector(
+                        `[data-dropdown="${activeDropdown.id.replace("dropdown-", "")}"]`
+                    );
+                    if (button) {
+                        positionDropdown(button, activeDropdown);
+                    }
+                }
+
+                if (
+                    window.innerWidth >= 1024 &&
+                    !mobileMenu?.classList.contains("hidden")
+                ) {
+                    toggleMobileMenu();
+                }
+            }, 100);
+        });
+
+        // Handle escape key
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                if (activeDropdown) {
+                    activeDropdown.classList.add("hidden");
+                    const button = document.querySelector(
+                        `[data-dropdown="${activeDropdown.id.replace("mobileDropdown-", "").replace("dropdown-", "")}"]`
+                    );
+                    const arrow = button?.querySelector("svg");
+                    if (arrow) {
+                        arrow.style.transform = "rotate(0deg)";
+                    }
+                    activeDropdown = null;
+                }
+                if (!mobileMenu?.classList.contains("hidden")) {
+                    toggleMobileMenu();
+                }
+            }
+        });
+    });
+</script>

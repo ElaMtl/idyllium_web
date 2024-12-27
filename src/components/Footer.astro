@@ -1,0 +1,105 @@
+---
+import logo_dark from "@/images/logo_dark.png";
+import { Image } from "astro:assets";
+
+export interface FooterProps {
+    footerItems: Array<{
+        title: string;
+        items: Array<{ text: string; link: string }>;
+    }>;
+    homeHref: string;
+}
+
+const { footerItems, homeHref } = Astro.props as FooterProps;
+---
+
+<footer class="p-8 md:py-12 w-full text-center sm:text-start">
+    <nav
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+        aria-label="Footer Navigation"
+    >
+        <div class="grid gap-4">
+            <a
+                href={homeHref}
+                class="w-full h-24 sm:w-40 sm:h-full"
+                aria-label="Home"
+            >
+                <Image
+                    class="w-full h-24 sm:w-40 sm:h-full object-contain"
+                    src={logo_dark}
+                    alt="Company Logo"
+                />
+            </a>
+            <address
+                class="grid gap-2 text-sm text-muted-foreground not-italic"
+            >
+                <p>18 Avenue St-Henri Vaudreuil-Dorion, QC J7V 2J6</p>
+                <a href="tel:(450) 330-0470"><p>(450) 330-0470</p></a>
+            </address>
+            <div class="flex gap-4 justify-center sm:justify-start">
+                <a
+                    href="https://www.instagram.com/cliniqueidyllium/?hl=en"
+                    class="text-muted-foreground hover:text-yellow-500"
+                    aria-label="Instagram"
+                >
+                    <svg
+                        class="h-6 w-6 hover:text-yellow-500"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                    >
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"
+                        ></rect>
+                        <path
+                            d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                        ></path>
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a
+                    href="https://www.facebook.com/medspaidyllium/"
+                    class="text-muted-foreground hover:text-yellow-500"
+                    aria-label="Facebook"
+                >
+                    <svg
+                        class="text-muted-foreground hover:text-yellow-500"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                    >
+                        <path
+                            d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                        ></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        {
+            footerItems.map((item) => (
+                <div>
+                    <h2 class="font-medium text-2xl font-antic text-muted-foreground">
+                        {item.title}
+                    </h2>
+                    <ul>
+                        {item.items.map((subItem) => (
+                            <li class="py-1">
+                                <a
+                                    href={subItem.link}
+                                    class="text-lg text-muted-foreground uppercase font-futuraPT font-medium hover:underline hover:text-yellow-500"
+                                >
+                                    {subItem.text}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ))
+        }
+    </nav>
+</footer>

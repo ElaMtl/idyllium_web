@@ -1,0 +1,68 @@
+---
+import Diamond from "@/components/Diamond.astro";
+
+interface Props {
+    src: string;
+    section: string;
+    title: string;
+    subtitle?: string;
+}
+const { src, section, title, subtitle } = Astro.props;
+---
+
+<div class="relative">
+    <img
+        class="absolute aspect-video top-0 left-0 z-[-101] object-cover w-full"
+        src={src}
+        alt={section}
+        loading="eager"
+    />
+    <div
+        class="absolute inset-0 w-full h-full bg-gradient-to-b from-black/90 to-black/55 z-[-100]"
+    >
+    </div>
+
+    <div
+        class="relative pt-[56.25%] flex justify-center lg:justify-start text-white"
+    >
+        <div class="absolute right-0 bottom-0 xl:bottom-80 px-20">
+            <div class="flex items-center justify-center">
+                <Diamond />
+                <div class="w-full flex flex-col items-center">
+                    <h1
+                        class="max-w-[300px] text-sm md:text-lg lg:text-xl pt-2 font-raleway font-thin uppercase lg:tracking-wider"
+                    >
+                        {section}
+
+                        <span
+                            class={`font-antic block ${
+                                title.length > 30
+                                    ? "text-md md:text-xl lg:text-2xl"
+                                    : "text-2xl md:text-4xl lg:text-5xl"
+                            } uppercase lg:tracking-wider`}
+                        >
+                            {title}
+                        </span>
+
+                        <div class="w-[110%] h-[1px] bg-white my-1 lg:my-4">
+                        </div>
+
+                        {
+                            subtitle && (
+                                <span
+                                    class={`font-futuraPT block uppercase tracking-wide font-light mx-auto ${
+                                        subtitle.length > 30
+                                            ? "text-xs md:text-sm lg:text-base"
+                                            : "text-sm md:text-base lg:text-lg"
+                                    }`}
+                                >
+                                    {subtitle}
+                                </span>
+                            )
+                        }
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

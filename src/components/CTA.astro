@@ -1,0 +1,40 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    buttonText: string;
+    href: string;
+}
+const { title, description, buttonText, href } = Astro.props;
+import Button from "@/components/Button.astro";
+import calme from "@/images/calme.png";
+import { Image } from "astro:assets";
+---
+
+<div
+    class="text-white px-6 h-full w-full overflow-hidden"
+    style="background-image: linear-gradient(240deg, #4B2810 0%, #FFCF96E0 100%);"
+>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-center">
+        <div class="md:order-2 flex flex-col justify-center">
+            <h2 class="text-4xl font-extralight uppercase py-4 xl:py-8">
+                {title}
+            </h2>
+            <p class="text-xl">
+                {description}
+            </p>
+            <div class="flex items-center justify-center py-4 xl:py-8">
+                <Button href={href} text={buttonText} />
+            </div>
+        </div>
+        <div class="flex justify-center items-center w-full">
+            <div class="w-96">
+                <Image
+                    class="md:h-[375px] object-cover object-top w-full md:order-1"
+                    src={calme}
+                    alt="calme"
+                />
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+---
+interface Props {
+    href?: string;
+    text: string;
+    className?: string; // Add an optional className property
+    type?: "submit" | "reset" | "button"; // Restrict type property to specific values
+}
+const { href, text, className, type } = Astro.props;
+---
+
+{
+    href ? (
+        <a href={href} class="text-center">
+            <div
+                class={`py-4 text-white hover:text-border px-8 h-full w-full bg-gradient-to-b from-[#EBD099] hover:to-yellow-600 to-[#D7B167] ${className || ""}`}
+            >
+                <span class="uppercase text-xl font-antic font-black">
+                    {text}
+                </span>
+            </div>
+        </a>
+    ) : (
+        <button type={type} class="w-full">
+            <div
+                class={`py-4 text-white hover:text-border px-8 h-full w-full bg-gradient-to-b from-[#EBD099] hover:to-yellow-600 to-[#D7B167] ${className || ""}`}
+            >
+                <span class="uppercase text-xl font-antic font-black">
+                    {text}
+                </span>
+            </div>
+        </button>
+    )
+}

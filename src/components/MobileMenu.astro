@@ -1,0 +1,193 @@
+---
+const { headerItems } = Astro.props;
+---
+
+<nav class="relative">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-end h-16 items-center">
+            <button
+                class="toggle-button inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition-colors duration-300"
+                aria-label="Toggle menu"
+            >
+                <svg
+                    class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        class="menu-open transform transition-transform duration-300 ease-in-out origin-center"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path
+                        class="menu-close transform transition-transform duration-300 ease-in-out origin-center"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div
+        class="nav-content absolute right-0 w-64 bg-black shadow-lg opacity-0 invisible transition-opacity duration-300 ease-in-out"
+    >
+        <ul class="py-3 space-y-1">
+            {
+                headerItems.map((item, index) => (
+                    <li class="nav-item">
+                        {item.elements ? (
+                            <button class="w-full text-left font-raleway font-thin uppercase text-md text-white hover:text-yellow-500 transition-colors duration-300 whitespace-nowrap px-3 py-2 rounded-md flex justify-between items-center">
+                                {item.triggerName}
+                                <svg
+                                    class="h-4 w-4 transform transition-transform duration-300 ease-in-out"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </button>
+                        ) : (
+                            <a
+                                href={item.href || "#"}
+                                class="block w-full text-left font-raleway font-thin uppercase text-md text-white hover:text-yellow-500 transition-colors duration-300 whitespace-nowrap px-3 py-2 rounded-md"
+                            >
+                                {item.triggerName}
+                            </a>
+                        )}
+                        {item.elements && (
+                            <ul class="submenu hidden mt-2 space-y-2 bg-black shadow-lg border border-gray-700 py-2 overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+                                {item.elements.map((subitem) => (
+                                    <li
+                                        class={
+                                            subitem.label
+                                                ? "font-bold text-white font-antic text-lg uppercase mt-2 pb-1 border-b border-white"
+                                                : ""
+                                        }
+                                    >
+                                        <a
+                                            href={subitem.href}
+                                            class="block text-white font-antic hover:text-yellow-500 px-2 py-1 transition-colors duration-300"
+                                        >
+                                            {subitem.label || subitem.item}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+</nav>
+
+<style>
+    .nav-item > button:hover,
+    .nav-item > a:hover,
+    .nav-item.active > button {
+        @apply text-yellow-500;
+    }
+
+    .toggle-button .menu-open {
+        opacity: 1;
+        transform: rotate(0) translateY(0) translateX(0);
+    }
+
+    .toggle-button .menu-close {
+        opacity: 0;
+        transform: rotate(-90deg) translateY(0) translateX(0);
+    }
+
+    .toggle-button.active .menu-open {
+        opacity: 0;
+        transform: rotate(45deg) translateY(6px) translateX(-6px);
+    }
+
+    .toggle-button.active .menu-close {
+        opacity: 1;
+        transform: rotate(0) translateY(0) translateX(0);
+    }
+</style>
+
+<script>
+    function handleNavigation() {
+        const toggleButton = document.querySelector(
+            ".toggle-button"
+        ) as HTMLElement;
+        const navContent = document.querySelector(
+            ".nav-content"
+        ) as HTMLElement;
+        const navItems = document.querySelectorAll(".nav-item");
+
+        function setNavContentPosition() {
+            if (toggleButton && navContent) {
+                const rect = toggleButton.getBoundingClientRect();
+                navContent.style.top = `${rect.bottom}px`;
+            }
+        }
+
+        if (toggleButton && navContent) {
+            setNavContentPosition();
+            window.addEventListener("resize", setNavContentPosition);
+
+            toggleButton.addEventListener("click", () => {
+                navContent.classList.toggle("opacity-0");
+                navContent.classList.toggle("invisible");
+                toggleButton.classList.toggle("active");
+                if (navContent.classList.contains("opacity-0")) {
+                    navItems.forEach((item) => {
+                        const subMenu = item.querySelector(
+                            ".submenu"
+                        ) as HTMLElement;
+                        const arrow = item.querySelector("svg") as SVGElement;
+                        if (subMenu) {
+                            subMenu.style.maxHeight = "0px";
+                            subMenu.classList.add("hidden");
+                        }
+                        if (arrow) {
+                            arrow.classList.remove("rotate-180");
+                        }
+                        item.classList.remove("active");
+                    });
+                }
+            });
+        }
+
+        navItems.forEach((item) => {
+            const trigger = item.querySelector("button") as HTMLElement;
+            const subMenu = item.querySelector(".submenu") as HTMLElement;
+
+            if (trigger && subMenu) {
+                trigger.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const isHidden = subMenu.classList.contains("hidden");
+                    subMenu.classList.toggle("hidden");
+                    item.classList.toggle("active");
+                    const arrow = trigger.querySelector("svg") as SVGElement;
+                    if (arrow) {
+                        arrow.classList.toggle("rotate-180");
+                    }
+                    if (isHidden) {
+                        subMenu.style.maxHeight = `${subMenu.scrollHeight}px`;
+                    } else {
+                        subMenu.style.maxHeight = "0px";
+                    }
+                });
+            }
+        });
+    }
+
+    window.addEventListener("load", handleNavigation);
+</script>
