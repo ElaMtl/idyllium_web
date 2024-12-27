@@ -1,0 +1,224 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import corps from "@/images/corps.webp";
+import face from "@/images/face.webp";
+import epilation from "@/images/epilation.webp";
+import produits from "@/images/produits.webp";
+import analyse_peau from "@/images/analyse_peau.webp";
+import Image from "astro/components/Image.astro";
+import ImageCard from "@/components/ImageCard.astro";
+import clinique2 from "@/images/clinique2.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import home2Video from "@/videos/home2_compressed.mp4";
+import after_home from "@/images/after_home.webp";
+import before_home from "@/images/before_home.webp";
+import ImageComparison from "@/components/ImageComparison.astro";
+import videoframe_home2 from "@/images/videoframe_home2.webp";
+import Button from "@/components/Button.astro";
+import HomePageBackground from "@/components/HomePageBackground.astro";
+---
+
+<Layout
+    language="en"
+    title="Idyllium Clinic - Health and Wellness in Vaudreuil"
+    description="Welcome to Idyllium Clinic in Vaudreuil. Quality healthcare and personalized well-being."
+    keywords="Idyllium Clinic, Healthcare, Wellness, Vaudreuil, Medical Services, Personalized Care, Health and Wellness, Clinic in Vaudreuil, Quality Care"
+    currentHref="/en"
+    alternateHref="/"
+>
+    <main>
+        <HomePageBackground
+            title="Idyllium Clinic"
+            subtitle="Excellence in Medico-Aesthetics"
+            description="You deserve the best approach and the best solution!"
+        />
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <h1 class="p-5 uppercase text-center">
+                Our goal is to guide you throughout your beauty journey
+            </h1>
+
+            <p class="p-5 text-center !leading-10 text-muted-foreground">
+                Listening and dialogue are at the heart of the experience with
+                us. This unique approach ensures the expression of the reality
+                and needs of each woman or man, and allows our specialists to
+                offer more than just a treatment, personalized support and
+                tailored products.
+            </p>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-28"
+            >
+                <div>
+                    <a href="#">
+                        <ImageCard src={face} alt="" title="Face" />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Face rejuvenation and lifting
+                    </p>
+                </div>
+                <div>
+                    <a href="#">
+                        <ImageCard src={corps} alt="" title="Body" />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Body reshaping and firming
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={epilation}
+                            alt=""
+                            title="Hair Removal"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">Permanent hair removal</p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard src={produits} alt="" title="Products" />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Our range of products for all skin types
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full">
+                <div class="flex flex-row justify-center order-1 md:order-1">
+                    <Image
+                        class="object-contain p-3"
+                        src={analyse_peau}
+                        alt="skin analysis"
+                    />
+                </div>
+
+                <div
+                    class="flex flex-col justify-center order-1 md:order-none p-3"
+                >
+                    <h2 class="uppercase font-black py-5">Skin Analysis</h2>
+                    <p class="text-muted-foreground">
+                        <span
+                            >Idyllium Clinic offers you innovative ways to feel
+                            safe when receiving your aesthetic treatments.
+                            Having methods specially designed for you offers you
+                            treatment that is compatible with your skin!
+                        </span>
+                        <span class="block"
+                            >We offer you the Skintel® Melanin Reader™, an
+                            FDA-approved melanin reader, to help you organize
+                            treatments for yourself!</span
+                        >
+                    </p>
+                    <div class="flex items-center justify-center py-20">
+                        <Button href="#" text="Learn more" />
+                    </div>
+                </div>
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={clinique2}
+                                alt="clinic"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">Idyllium Clinic</h2>
+                    <h3 class="text-muted-foreground py-5">
+                        Medico-aesthetic clinic for skin rejuvenation and
+                        firming
+                    </h3>
+                    <p class="text-muted-foreground">
+                        <span>
+                            Our clinic was created with the aim of offering
+                            medico-aesthetic services, but above all, the
+                            possibility of solving problems. Often people do not
+                            necessarily know exactly what they need, and even
+                            when they have an idea, what they have in mind is
+                            not always the best solution for them. Our goal is
+                            really to find the best solution for each person who
+                            needs it!
+                        </span>
+                        <span class="block">
+                            At Idyllium Clinic, you achieve beautiful natural
+                            results by choosing a 360° approach. You collaborate
+                            with honest professionals who will not only listen
+                            attentively to you, but also study your profile to
+                            help you achieve the best possible results.
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <CustomSeparator />
+
+            <h1 class="uppercase font-extralight py-2 text-center">
+                Our Galleries
+            </h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-center">
+                <div class="flex flex-col p-3">
+                    <h2 class="text-xl font-light mb-4">
+                        A picture is worth a thousand words
+                    </h2>
+                    <div class="w-full">
+                        <ImageComparison
+                            src1={before_home}
+                            alt1={"before surgery"}
+                            src2={after_home}
+                            alt2={"after surgery"}
+                        />
+                    </div>
+                </div>
+                <div class="flex flex-col p-3">
+                    <h2 class="text-xl font-light mb-4">
+                        See our treatment in action
+                    </h2>
+                    <div class="w-full">
+                        <video
+                            class="aspect-video object-contain"
+                            controls
+                            src={home2Video}
+                            poster={videoframe_home2.src}
+                            preload="none"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const video = document.getElementById("homeVideo");
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        (video as HTMLVideoElement).src =
+                            video.getAttribute("data-src");
+                        observer.unobserve(video);
+                    }
+                });
+            },
+            {
+                threshold: 0.25,
+            }
+        );
+
+        observer.observe(video);
+    });
+</script>

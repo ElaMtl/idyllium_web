@@ -1,0 +1,166 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import vergeturesBG from "@/images/vergetures-bg.webp";
+import vergetures from "@/images/vergetures.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import Card from "@/components/Card.astro";
+import { Accordion } from "@/components/Accordion";
+import GradientSection from "@/components/GradientSection.astro";
+import ImageCard from "@/components/ImageCard.astro";
+import laser from "@/images/laser.webp";
+import raffermissementTempsure from "@/images/raffermissement-tempsure.webp";
+import PageBackground from "@/components/PageBackground.astro";
+
+const data = [
+    {
+        title: "Adoptez une alimentation équilibrée",
+        description: [
+            "On ne le répétera jamais assez mais l’alimentation est souvent la clé dans beaucoup de problèmes de santé. Manger sain permettra de stabiliser votre poids et ainsi d’éviter les prises ou pertes de poids trop brusques.",
+        ],
+    },
+    {
+        title: "Pratiquez une activité physique régulière",
+        description: [
+            "Le sport c’est la santé ! Non seulement le sport est bon pour le moral, car il diffuse des endorphines (hormone du plaisir), mais il est essentiel pour le fonctionnement de notre corps, tout simplement.Nos conseils : Marchez au minimum ½ heure par jour et essayez de pratiquer un sport régulièrement. Laissez le temps à vos muscles de bien se reposer entre chaque séance afin de ne pas abîmer votre fibre musculaire.",
+        ],
+    },
+    {
+        title: "Hydratez et massez votre peau",
+        description: [
+            "Hydrater votre peau quotidiennement avec des crèmes enrichies en élastine et en collagène est une geste essentiel pour réparer en profondeur votre peau.",
+        ],
+    },
+    {
+        title: "Protégez-vous du soleil",
+        description: [
+            "Evitez à tout prix le soleil sans protection. Bronzer sur vos vergetures entraînera une pigmentation irréversible de ces dernières.",
+        ],
+    },
+];
+---
+
+<Layout
+    language="fr"
+    title="Vergetures | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/preoccupation/vergetures"
+    alternateHref="/en/concern/stretch-marks"
+>
+    <main>
+        <PageBackground
+            src={vergeturesBG.src}
+            section="Préoccupation"
+            title="Vergetures"
+        />
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <div class="text-center p-5 md:p-8 lg:p-12 max-w-9xl container">
+                <h2 class="uppercase font-black py-5">
+                    Les Vergetures, qu’est-ce que c’est?
+                </h2>
+                <p class="text-muted-foreground">
+                    <span
+                        >Ces fines lignes, qui peuvent ressembler à des
+                        zébrures, apparaissent quand la peau s’étire
+                        soudainement et dépasse sa limite d’élasticité –
+                        autrement dit, quand les fibres de collagène et
+                        d’élastine qui lui donnent sa souplesse se déchirent.
+                        Comme elles sont liées à une réaction inflammatoire,
+                        elles prennent d’abord une couleur rouge ou violacée;
+                        après un certain temps, cependant, elles blanchissent et
+                        deviennent plus pâles que la peau.
+                    </span>
+                </p>
+            </div>
+
+            <CustomSeparator />
+
+            <h2 class="uppercase font-black py-5 text-center">
+                Quels sont les différents types de vergetures ?
+            </h2>
+            <div
+                class="grid grid-cols-1 lg:grid-cols-2 gap-12 py-28 text-white text-center"
+            >
+                <Card
+                    title="Les vergetures rouges/violacées dites immatures"
+                    description="Une vergeture récente est ainsi appelée « immature » : elle est d’une teinte rouge ou violette. Cette couleur résulte du fait que la vergeture est alors en phase inflammatoire. En effet, l’étirement de la peau met à mal les fibroblastes. En réponse, le derme s’enflamme."
+                />
+                <Card
+                    title="Les vergetures blanches dites matures"
+                    description="S'entame ensuite un processus de réparation pour remplacer les cellules endommagées. A ce stade, on parle de vergetures dites matures et deviennent alors blanches nacrées."
+                />
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        Comment peut-on prévenir le Les Vergetures?
+                    </h2>
+                    <div class="relative">
+                        <Accordion client:load data={data} />
+                    </div>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={vergetures}
+                                alt="vergetures"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <GradientSection
+            title="Vous souffrez des vergetures?"
+            description="La Clinique Idyllium vous propose différents traitements contre l'acné. Réservez une consultation gratuite avec nos spécialistes pour vous trouver un plan de traitement efficace adapté à votre peau."
+            buttonText="Réservez une consultation"
+            href="#"
+        />
+
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <h1 class="text-center uppercase my-5">
+                Qu'offrons-nous pour traiter les vergetures?
+            </h1>
+            <h2 class="uppercase text-center">Nos solutions</h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+            >
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={laser}
+                            alt=""
+                            title="IPL Thérapie au laser Icon®"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Rajeunissement et correction des imperfections de la
+                        peau
+                    </p>
+                </div>
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={raffermissementTempsure}
+                            alt=""
+                            title="Raffermissement de la peau avec TempSure™ Envi"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Lifting du visage et du corps non chirurgical
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

@@ -1,0 +1,166 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import doubleMentonBG from "@/images/double-menton-bg.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import Card from "@/components/Card.astro";
+import GradientSection from "@/components/GradientSection.astro";
+import ImageCard from "@/components/ImageCard.astro";
+import doubleMenton from "@/images/double-menton.webp";
+import belkyra from "@/images/belkyra.webp";
+import endermologie from "@/images/endermologie.webp";
+import PageBackground from "@/components/PageBackground.astro";
+---
+
+<Layout
+    language="fr"
+    title="Double Menton | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/preoccupation/double-menton"
+    alternateHref="/en/concern/double-chin"
+>
+    <main>
+        <PageBackground
+            src={doubleMentonBG.src}
+            section="Préoccupation"
+            title="Double Menton"
+        />
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <div class="text-center p-5 md:p-8 lg:p-12 max-w-9xl container">
+                <h2 class="uppercase font-black py-5">
+                    Le Double Menton, qu’est-ce que c’est?
+                </h2>
+                <p class="text-muted-foreground">
+                    <span
+                        >Un dépôt de graisse, ou une peau relâchée du cou et du
+                        menton, peuvent créer un double menton. Peu esthétique
+                        voire gênant, le double menton peut toucher hommes et
+                        femmes de tout âge. Un double menton n'est pas forcément
+                        lié à l'obésité. Il peut apparaître chez une personne
+                        ayant un poids de santé dans les normes généralement
+                        acceptées. C’est le développement anormal des adipocytes
+                        (sorte de cellulite) dans cette partie du corps qui est
+                        à l'origine de l’amas graisseux provoquant le double
+                        menton. Cet amas fait généralement que la peau prend une
+                        consistance molle et flasque, parfois avec un aspect «en
+                        peau d'orange», granuleux et capitonné.
+                    </span>
+                </p>
+            </div>
+
+            <CustomSeparator />
+
+            <h2 class="uppercase font-black py-5 text-center">
+                Qu’est-ce qui peut causer Le Double Menton?
+            </h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-28 text-white text-center"
+            >
+                <Card
+                    title=""
+                    description="Le relâchement cutané : la peau qui tombe cause un double menton."
+                />
+                <Card
+                    title=""
+                    description="L’hypotonie et la flaccidité musculaire, notamment du muscle platysma, c’est le relâchement musculaire."
+                />
+                <Card
+                    title=""
+                    description="L’hypoprojection du menton donne une fausse impression de double menton."
+                />
+                <Card
+                    title=""
+                    description="La glande salivaire submandibulaire, ptôsée ou hypertrophique se trouve en dessous de la mâchoire et peut être confondue par un excès adipeux."
+                />
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        Comment peut-on prévenir le double menton?
+                    </h2>
+                    <div>
+                        <ul
+                            class="list-disc list-inside text-xl text-muted-foreground"
+                        >
+                            <li>Les crèmes hydratantes pour le visage</li>
+                            <li>Outils de massage</li>
+                            <li>Traitements par lipolyse</li>
+                            <li>L’exercice physique</li>
+                        </ul>
+                        <p class="text-muted-foreground">
+                            <span>
+                                En exerçant les muscles autour de votre double
+                                menton, vous pouvez progressivement vous
+                                débarrasser de cette graisse sous-mentonnière.
+                                Bien entendu, vous devez effectuer ces exercices
+                                régulièrement pour obtenir les meilleurs
+                                résultats.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={doubleMenton}
+                                alt="double menton"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <GradientSection
+            title="Vous souffrez du double menton?"
+            description="La Clinique Idyllium vous propose différents traitements contre le double menton. Réservez une consultation gratuite avec nos spécialistes pour vous trouver un plan de traitement efficace adapté à votre peau."
+            buttonText="Réservez une consultation"
+            href="#"
+        />
+
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <h1 class="text-center uppercase my-5">
+                Qu'offrons-nous pour traiter le double menton?
+            </h1>
+            <h2 class="uppercase text-center">Nos solutions</h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+            >
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={endermologie}
+                            alt=""
+                            title="Endermologie visage"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Raffermissement de la peau et traitement des rides
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={belkyra}
+                            alt=""
+                            title="Injectables - Belkyra®"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Réduction du double menton
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

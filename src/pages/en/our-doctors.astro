@@ -1,0 +1,217 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import medecins from "@/images/medecins.webp";
+import medecins3 from "@/images/medecins3.webp";
+import vitalie from "@/images/vitalie.webp";
+import tatiana from "@/images/tatiana.webp";
+import education1 from "@/images/education1.png";
+import education2 from "@/images/education2.png";
+import education3 from "@/images/education3.png";
+import education4 from "@/images/education4.png";
+import education5 from "@/images/education5.png";
+import education6 from "@/images/education6.png";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import Button from "@/components/Button.astro";
+---
+
+<Layout
+    language="en"
+    title="Our Doctors | Idyllium Clinic, Vaudreuil"
+    description="Idyllium Clinic | Botox Fillers Injections | Vaudreuil-Dorion"
+    keywords="Clinic, Idyllium, medical aesthetics, rejuvenation, skin tightening"
+    currentHref="/en/our-doctors"
+    alternateHref="/nos-medecins"
+>
+    <main>
+        <div class="relative">
+            <Image
+                class="absolute aspect-video top-0 left-0 z-[-101] object-cover w-full"
+                src={medecins3}
+                alt="clinic"
+                loading="eager"
+            />
+            <div
+                class="absolute inset-0 w-full h-full bg-black opacity-55 z-[-100]"
+            >
+            </div>
+            <div
+                class="relative pt-[56.25%] flex justify-center lg:justify-start text-center text-white"
+            >
+                <div class="absolute bottom-0 lg:bottom-80 px-10">
+                    <div class="w-full flex flex-col items-center">
+                        <h1
+                            class="text-2xl md:text-4xl lg:text-5xl uppercase lg:tracking-wider"
+                        >
+                            Our Doctors
+                        </h1>
+                        <p
+                            class="text-sm md:text-lg lg:text-xl pt-2 font-raleway font-thin"
+                        >
+                            Dr. Vitalie Sirbu
+                            <span class="block">Dr. Tatiana Sirbu</span>
+                        </p>
+                        <div
+                            class="hidden lg:block w-[110%] h-[1px] bg-white mt-4"
+                        >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-5 md:p-8 lg:p-12 !py-16 max-w-9xl container">
+              <div class="container mx-auto px-4 py-8">
+                  <div class="grid lg:grid-cols-2 md:grid-cols-[1fr_1fr]">
+                    <div class="flex flex-row justify-center items-center lg:row-span-2 md:mr-10 mb-16 lg:mb-0">
+                        <div class="relative inline-block">
+                            <div class="relative">
+                                <div
+                                    class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                                >
+                                </div>
+                                <Image
+                                    class="relative object-contain w-[650px] bg-border"
+                                    src={medecins}
+                                    alt="doctors"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <p class="text-muted-foreground">
+                            <span
+                                >Our doctors, Dr. Vitalie and Dr. Tatiana Sirbu, have spent the last 20 years of their careers perfecting their approach to medical aesthetic treatments.
+                            </span>
+                            <span class="block"
+                                >Having studied medicine first in Europe and then in Canada, and working in the field of aesthetics in both places, they have a wealth of knowledge.
+                            </span>
+                        </p>
+                    </div>
+                    <div class="flex flex-col justify-center md:col-span-2 lg:col-span-1">
+                        <p class="text-muted-foreground">
+                            <span
+                                >After training in the field of aesthetic medicine in Moldova, Russia, Monaco, and France, Drs. Sirbu now want to bring a new approach to aesthetics to their clients here in Montérégie, QC.
+                            </span>
+                            <span class="block"
+                                >By combining the knowledge from these two worlds, Vitalie and Tatiana have decided to merge what is done in Canada with what is done in Europe, so that these two approaches can complement each other and provide better results.
+                            </span>
+                            <span class="block"
+                                >The reason our doctors decided to establish Idyllium Clinic is to combine the best approaches to aesthetics from around the world, along with the work done by aestheticians and the advanced treatment options that can only be offered by doctors.
+                            </span>
+                        </p>
+                    </div>
+                  </div>
+              </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 h-full">
+                <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-4">
+                    <div class="flex flex-row justify-center">
+                        <div class="relative inline-block">
+                            <div class="relative">
+                                <div
+                                    class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                                >
+                                </div>
+                                <Image
+                                    class="relative object-contain bg-border"
+                                    src={vitalie}
+                                    alt="vitalie"
+                                />
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div
+                        class="flex flex-col justify-center p-3 text-center"
+                    >
+                        <h2 class="uppercase py-5">Dr. Vitalie Sirbu</h2>
+                        <p class="text-muted-foreground">
+                            <span
+                                >Family Physician
+                            </span>
+                            <span class="block"
+                                >Phlebologist
+                            </span>
+                        </p>
+                        <div class="flex items-center justify-center py-8">
+                            <Button href="#" text="View Biography" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-4">
+                    <div class="flex flex-row justify-center md:order-1 lg:order-none">
+                        <div class="relative inline-block">
+                            <div class="relative">
+                                <div
+                                    class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                                >
+                                </div>
+                                <Image
+                                    class="relative object-contain bg-border"
+                                    src={tatiana}
+                                    alt="tatiana"
+                                />
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div
+                        class="flex flex-col justify-center p-3 text-center"
+                    >
+                        <h2 class="uppercase py-5">Dr. Tatiana Sirbu</h2>
+                        <p class="text-muted-foreground">
+                            <span
+                                >Family Physician
+                            </span>
+                        </p>
+                        <div class="flex items-center justify-center py-8">
+                            <Button href="#" text="View Biography" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 w-full mt-16 gap-4">
+                <Image
+                    src={education1}
+                    alt="education1"
+                    loading="eager"
+                    class="mx-auto"
+                />
+                <Image
+                    src={education2}
+                    alt="education2"
+                    loading="eager"
+                    class="mx-auto"
+                />
+                <Image
+                    src={education3}
+                    alt="education3"
+                    loading="eager"
+                    class="mx-auto"
+                />
+                <Image
+                    src={education4}
+                    alt="education4"
+                    loading="eager"
+                    class="mx-auto"
+                />
+                <Image
+                    src={education5}
+                    alt="education5"
+                    loading="eager"
+                    class="mx-auto"
+                />
+                <Image
+                    src={education6}
+                    alt="education6"
+                    loading="eager"
+                    class="mx-auto"
+                />
+            </div>
+        </div>
+    </main>
+</Layout>

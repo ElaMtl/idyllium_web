@@ -1,0 +1,214 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import fotona3DBG from "@/images/fotona-3d-bg.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import PageBackground from "@/components/PageBackground.astro";
+import step1 from "@/images/fotona3d-step1.jpg";
+import step2 from "@/images/fotona3d-step2.jpg";
+import step3 from "@/images/fotona3d-step3.jpg";
+import NumberSection from "@/components/NumberSection.astro";
+import ImageCard from "@/components/ImageCard.astro";
+import cicatricesBG from "@/images/cicatrices-bg.webp";
+import relachementCutaneBG from "@/images/relachement-cutane-bg.webp";
+import ridesEtRidulesBG from "@/images/rides-et-ridules-bg.webp";
+import tachesPigmentairesBG from "@/images/taches-pigmentaires-bg.webp";
+import teintTerneBG from "@/images/teint-terne-bg.webp";
+import resultats from "@/images/resultats2.jpg";
+
+const steps = [
+    {
+        src: step1,
+        alt: "SmoothLiftin™",
+        number: 1,
+        description: "SmoothLiftin™",
+    },
+    {
+        src: step2,
+        alt: "FRAC3®",
+        number: 2,
+        description: "FRAC3®",
+    },
+    {
+        src: step3,
+        alt: "PIANO®",
+        number: 3,
+        description: "PIANO®",
+    },
+];
+---
+
+<Layout
+    language="fr"
+    title="Fotona3D | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/traitement/fotona-3d"
+    alternateHref="/en/treatment/fotona-3d"
+>
+    <main>
+        <PageBackground
+            src={fotona3DBG.src}
+            section="Traitement"
+            title="Fotona 3D™"
+            subtitle="Lissage non invasif du visage"
+        />
+        <div class="p-5 md:p-8 lg:p-12 w-full">
+            <h1 class="p-5 uppercase text-center">De quoi s’agit-il?</h1>
+
+            <p class="p-5 text-center !leading-10 text-muted-foreground">
+                Fotona 3D est une série de traitements au laser, synergiques et
+                non invasifs, de l’extérieur du visage et de l’intérieur de la
+                cavité buccale, permettant la contraction, dans toute son
+                épaisseur, du collagène ce qui resserre et repulpe (réduction
+                des rides) la peau de façon permanente, sans injections
+            </p>
+            <CustomSeparator />
+
+            <div class="container">
+                <h2 class="uppercase font-black py-2">
+                    Les trois «dimensions» de Fotona3D
+                </h2>
+                <p class="text-muted-foreground">
+                    <span>
+                        <span class="font-black">1 - SmoothLiftin™</span> La première
+                        étape consiste en un traitement sans douleur qui vise à repulper
+                        la peau à l’aide d’un procédé appelé induction de collagène.
+                        Parmi les effets on compte une diminution globale du tiraillement
+                        de la peau et une amélioration de son élasticité, en plus
+                        d’un effet repulpant, très comparable à celui d’un comblement.
+                    </span>
+                    <span class="block"
+                        ><span class="font-black">2 - FRAC3®</span> La deuxième
+                        étape consiste en un traitement ciblé d’imperfections spécifiques
+                        et plus profondes de la peau telles que les boutons et les
+                        composants vasculaires, à l’aide d’un laser fractionné. C’est
+                        un traitement rapide, efficace et qui aidera à redonner à
+                        la peau la texture de sa jeunesse.
+                    </span>
+                    <span class="block"
+                        ><span class="font-black">3 - PIANO®</span> La troisième
+                        étape de Fotona 3D consiste en un réchauffement externe de
+                        la peau de manière sécuritaire et rapide en concentrant la
+                        transmission d’énergie souscutanée. Cela est réalisé à l’aide
+                        d’une technique de brossage et confère un effet tenseur remarquable
+                        aux zones où la peau est relâchée.
+                    </span>
+                </p>
+            </div>
+
+            <NumberSection steps={steps} />
+            <CustomSeparator />
+
+            <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+                <h1 class="text-center uppercase my-5">
+                    Pourquoi choisir Fotona 3D™?
+                </h1>
+                <h2 class="uppercase text-center">
+                    Pour répondre à ces préoccupations
+                </h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+                >
+                    <div>
+                        <a href="#">
+                            <ImageCard
+                                src={cicatricesBG}
+                                alt=""
+                                title="Cicatrices"
+                            />
+                        </a>
+                        <p class="text-muted-foreground">
+                            La cicatrisation fait partie du processus de
+                            guérison
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <ImageCard
+                                src={relachementCutaneBG}
+                                alt=""
+                                title="Relâchement cutané"
+                            />
+                        </a>
+                        <p class="text-muted-foreground">
+                            Avec l’âge, la peau de chaque individu s’amincit,
+                            s’assèche et perd en élasticité
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <ImageCard
+                                src={ridesEtRidulesBG}
+                                alt=""
+                                title="Rides et ridules"
+                            />
+                        </a>
+                        <p class="text-muted-foreground">
+                            Chacun définit les rides à sa manière
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <ImageCard
+                                src={tachesPigmentairesBG}
+                                alt=""
+                                title="Taches pigmentaires"
+                            />
+                        </a>
+                        <p class="text-muted-foreground">
+                            Les taches pigmentaires sont une anomalie
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <ImageCard
+                                src={teintTerneBG}
+                                alt=""
+                                title="Teint terne"
+                            />
+                        </a>
+                        <p class="text-muted-foreground">
+                            La peau déshydratée n’a pas assez d’eau dans le
+                            derme
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        À quoi puis-je m’attendre avec ce traitement?
+                    </h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            Chacun est différent, mais vous pouvez vous attendre
+                            à ressentir une légère gêne au cours du traitement.
+                            Immédiatement après le traitement, votre peau est
+                            susceptible de présenter des rougeurs ou des
+                            gonflements, qui diminueront au bout de quelques
+                            heures. La plupart des patients peuvent retourner à
+                            leurs occupations dès la fin du traitement.
+                        </span>
+                    </p>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={resultats}
+                                alt="resultats"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

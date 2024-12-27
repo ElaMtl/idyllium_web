@@ -1,0 +1,573 @@
+---
+interface Props {
+    title: string;
+    language: string;
+    description: string;
+    keywords: string;
+    currentHref: string;
+    alternateHref: string;
+    metaRobotsDirective?: string;
+}
+
+const {
+    title,
+    language,
+    description,
+    keywords,
+    currentHref,
+    alternateHref,
+    metaRobotsDirective,
+} = Astro.props;
+const canonical = `https://idyllium.vercel.app${currentHref}`;
+const alternate = `https://idyllium.vercel.app${alternateHref}`;
+const alternateLang = language === "fr" ? "en" : "fr";
+const homeHref = language === "fr" ? "/" : "/en";
+
+import Menu from "@/components/Menu.astro";
+import clinique from "@/images/clinique.webp";
+import CTA from "@/components/CTA.astro";
+import Footer from "@/components/Footer.astro";
+
+const ctaTitle =
+    language === "fr"
+        ? "Clinique médico-esthéthique, rajeunissement et anti-âge"
+        : "Medico-aesthetic clinic, rejuvenation and anti-aging";
+
+const ctaDescription =
+    language === "fr"
+        ? "Nous discuterons de vos objectifs et créerons un plan de traitement ensemble. Laissez-nous vous aider à obtenir vos objectifs beauté !"
+        : "We will discuss your goals and create a treatment plan together. Let us help you achieve your beauty goals !";
+
+const ctaButtonText =
+    language === "fr" ? "Réservez une consultation" : "Book a consultation";
+
+const ctaHref = "#";
+
+const footerItems =
+    language === "fr"
+        ? [
+              {
+                  title: "À propos de nous",
+                  items: [
+                      { text: "Notre clinique", link: "/notre-clinique" },
+                      { text: "Cartes-cadeaux", link: "#" },
+                      { text: "Nous joindre", link: "#" },
+                      {
+                          text: "Analyse de la peau",
+                          link: "/traitement/analyse-de-la-peau",
+                      },
+                  ],
+              },
+              {
+                  title: "Visage",
+                  items: [
+                      { text: "Agents de comblement", link: "#" },
+                      { text: "Toxine botulinique", link: "#" },
+                      { text: "Soins faciaux", link: "#" },
+                      { text: "Épilation au laser", link: "#" },
+                      { text: "Radiofréquence FlexSure™", link: "#" },
+                      { text: "Radiofréquence TempSure™ Envi", link: "#" },
+                  ],
+              },
+              {
+                  title: "Corps",
+                  items: [
+                      { text: "Endermologie", link: "#" },
+                      { text: "Sclérothérapie", link: "#" },
+                      { text: "Massage et drainage", link: "#" },
+                      { text: "Sauna infrarouge", link: "#" },
+                  ],
+              },
+          ]
+        : [
+              {
+                  title: "About Us",
+                  items: [
+                      { text: "Our Clinic", link: "#" },
+                      { text: "Gift Cards", link: "#" },
+                      { text: "Contact Us", link: "#" },
+                      {
+                          text: "Skin Analysis",
+                          link: "/en/treatment/skin-analysis",
+                      },
+                  ],
+              },
+              {
+                  title: "Face",
+                  items: [
+                      { text: "Dermal Fillers", link: "#" },
+                      { text: "Botulinum Toxin", link: "#" },
+                      { text: "Facial Treatments", link: "#" },
+                      { text: "Laser Hair Removal", link: "#" },
+                      { text: "FlexSure™ Radiofrequency", link: "#" },
+                      { text: "TempSure™ Envi Radiofrequency", link: "#" },
+                  ],
+              },
+              {
+                  title: "Body",
+                  items: [
+                      { text: "Endermologie", link: "#" },
+                      { text: "Sclerotherapy", link: "#" },
+                      { text: "Massage and Drainage", link: "#" },
+                      { text: "Infrared Sauna", link: "#" },
+                  ],
+              },
+          ];
+
+const headerItems =
+    language === "fr"
+        ? [
+              {
+                  triggerName: "Traitements",
+                  elements: [
+                      {
+                          label: "Analyse de la peau",
+                          href: "/traitement/analyse-de-la-peau",
+                      },
+                      {
+                          label: "Visage",
+                          href: "#",
+                      },
+                      { item: "Bela MD", href: "/traitement/bela-md" },
+                      { item: "Fotona 3D™", href: "/traitement/fotona-3d" },
+                      { item: "Fotona 4D™", href: "/traitement/fotona-4d" },
+                      {
+                          item: "Fotona Nightlase",
+                          href: "/traitement/traitement-au-laser-nightlase-contre-les-ronflements",
+                      },
+                      {
+                          item: "Fotona pour l'acné",
+                          href: "/traitement/traitement-au-laser-de-lacne-et-des-cicatrices-dacne",
+                      },
+                      {
+                          item: "Fotona – Lésions pigmentées",
+                          href: "/traitement/fotona-lesions-pigmentees",
+                      },
+                      {
+                          item: "Fotona LipLase®",
+                          href: "/traitement/fotona-liplase",
+                      },
+                      {
+                          item: "Fotona – VectorLift®",
+                          href: "/traitement/fotona-vectorlift",
+                      },
+                      { item: "Fotona Onychomycose", href: "#" },
+                      {
+                          item: "Injectables – Agents de comblement",
+                          href: "#",
+                      },
+                      {
+                          item: "Injectables – Toxine botulinique",
+                          href: "#",
+                      },
+                      { item: "Fotona – SmoothEye®", href: "#" },
+                      {
+                          item: "Injectables – Belkyra®",
+                          href: "#",
+                      },
+                      { item: "Les fils tenseurs", href: "#" },
+                      {
+                          item: "IPL & thérapie au laser ICON®",
+                          href: "#",
+                      },
+                      { item: "Épilation au laser", href: "#" },
+                      {
+                          item: "Endermolift® – Endermologie visage",
+                          href: "#",
+                      },
+                      { item: "Peeling chimique", href: "#" },
+                      {
+                          item: "Raffermissement de la peau avec Tempsure™",
+                          href: "#",
+                      },
+                      { item: "Soins faciaux", href: "#" },
+
+                      {
+                          label: "Corps",
+                          href: "#",
+                      },
+                      {
+                          item: "Fotona gestion douleur",
+                          href: "#",
+                      },
+                      {
+                          item: "Fotona HotSculpting®",
+                          href: "#",
+                      },
+                      {
+                          item: "Injectables – Toxine botulinique",
+                          href: "#",
+                      },
+                      {
+                          item: "IPL & thérapie au laser ICON®",
+                          href: "#",
+                      },
+                      { item: "Épilation au laser", href: "#" },
+                      {
+                          item: "Lipomassage – Endermologie corps",
+                          href: "#",
+                      },
+                      { item: "Massage et drainage", href: "#" },
+                      {
+                          item: "Raffermissement de la peau avec FlexSure™",
+                          href: "#",
+                      },
+                      {
+                          item: "Raffermissement de la peau avec Tempsure™",
+                          href: "#",
+                      },
+                      { item: "Sauna infrarouge", href: "#" },
+                      { item: "Sclérosérapie", href: "#" },
+                  ],
+              },
+              {
+                  triggerName: "Préoccupations",
+                  elements: [
+                      {
+                          label: "Visage",
+                          href: "/preoccupation/#visage",
+                      },
+                      { item: "Acné", href: "/preoccupation/acne" },
+                      { item: "Cicatrices", href: "/preoccupation/cicatrices" },
+                      {
+                          item: "Double menton",
+                          href: "/preoccupation/double-menton",
+                      },
+                      { item: "Pilosité", href: "/preoccupation/pilosite" },
+                      {
+                          item: "Relâchement cutané",
+                          href: "/preoccupation/relachement-cutane",
+                      },
+                      {
+                          item: "Rides et ridules",
+                          href: "/preoccupation/rides-et-ridules",
+                      },
+                      { item: "Rosacée", href: "/preoccupation/rosacee" },
+                      {
+                          item: "Tâches pigmentaires",
+                          href: "/preoccupation/taches-pigmentaires",
+                      },
+                      {
+                          item: "Teint terne",
+                          href: "/preoccupation/teint-terne",
+                      },
+                      {
+                          item: "Télangiectasies",
+                          href: "/preoccupation/telangiectasies",
+                      },
+                      {
+                          label: "Corps",
+                          href: "/preoccupation/#corps",
+                      },
+                      { item: "Acné", href: "/preoccupation/acne" },
+                      { item: "Cellulite", href: "/preoccupation/cellulite" },
+                      { item: "Cicatrices", href: "/preoccupation/cicatrices" },
+                      { item: "Pilosité", href: "/preoccupation/pilosite" },
+                      {
+                          item: "Relâchement cutané",
+                          href: "/preoccupation/relachement-cutane",
+                      },
+                      {
+                          item: "Tâches pigmentaires",
+                          href: "/preoccupation/taches-pigmentaires",
+                      },
+                      { item: "Varices", href: "/preoccupation/varices" },
+
+                      { item: "Vergetures", href: "/preoccupation/vergetures" },
+                  ],
+              },
+              {
+                  triggerName: "Nos promotions",
+                  href: "/promotions",
+              },
+              {
+                  triggerName: "À propos",
+                  elements: [
+                      {
+                          label: "Nos médecins",
+                          href: "/nos-medecins",
+                      },
+                      {
+                          label: "Notre équipe",
+                          href: "#",
+                      },
+                      {
+                          label: "Notre clinique",
+                          href: "/notre-clinique",
+                      },
+                      {
+                          label: "Votre consultation",
+                          href: "/votre-consulation",
+                      },
+                  ],
+              },
+              {
+                  triggerName: "Nous joindre",
+                  href: "/contact",
+              },
+              {
+                  triggerName: "EN",
+                  href: alternateHref,
+              },
+          ]
+        : [
+              // English navigation items
+              {
+                  triggerName: "Treatments",
+                  elements: [
+                      {
+                          label: "Skin analysis",
+                          href: "/en/treatment/skin-analysis",
+                      },
+                      {
+                          label: "Face",
+                          href: "#",
+                      },
+                      { item: "Bela MD", href: "en/treatment/bela-md" },
+                      { item: "Fotona 3D™", href: "en/treatment/fotona-3d" },
+                      { item: "Fotona 4D™", href: "en/treatment/fotona-4d" },
+                      {
+                          item: "Fotona Nightlase",
+                          href: "/en/treatment/nightlase-laser-treatment-for-snoring",
+                      },
+                      {
+                          item: "Fotona for acne",
+                          href: "/en/treatment/laser-treatment-for-acne-and-acne-scars",
+                      },
+                      {
+                          item: "Fotona – Pigmented lesions",
+                          href: "/en/treatment/fotona-pigmented-lesions",
+                      },
+                      {
+                          item: "Fotona LipLase®",
+                          href: "/en/treatment/fotona-liplase",
+                      },
+                      {
+                          item: "Fotona – VectorLift®",
+                          href: "/en/treatment/fotona-vectorlift",
+                      },
+                      { item: "Fotona Onychomycosis", href: "#" },
+                      {
+                          item: "Injectables – Fillers",
+                          href: "#",
+                      },
+                      {
+                          item: "Injectables – Botulinum toxin",
+                          href: "#",
+                      },
+                      { item: "Fotona – SmoothEye®", href: "#" },
+                      {
+                          item: "Injectables – Belkyra®",
+                          href: "#",
+                      },
+                      { item: "Thread lifts", href: "#" },
+                      {
+                          item: "IPL & ICON® laser therapy",
+                          href: "#",
+                      },
+                      { item: "Laser hair removal", href: "#" },
+                      {
+                          item: "Endermolift® – Facial endermology",
+                          href: "#",
+                      },
+                      { item: "Chemical peel", href: "#" },
+                      {
+                          item: "Skin tightening with Tempsure™",
+                          href: "#",
+                      },
+                      { item: "Facial care", href: "#" },
+
+                      {
+                          label: "Body",
+                          href: "#",
+                      },
+                      {
+                          item: "Fotona pain management",
+                          href: "#",
+                      },
+                      {
+                          item: "Fotona HotSculpting®",
+                          href: "#",
+                      },
+                      {
+                          item: "Injectables – Botulinum toxin",
+                          href: "#",
+                      },
+                      {
+                          item: "IPL & ICON® laser therapy",
+                          href: "#",
+                      },
+                      { item: "Laser hair removal", href: "#" },
+                      {
+                          item: "Lipomassage – Body endermology",
+                          href: "#",
+                      },
+                      { item: "Massage and drainage", href: "#" },
+                      {
+                          item: "Skin tightening with FlexSure™",
+                          href: "#",
+                      },
+                      {
+                          item: "Skin tightening with Tempsure™",
+                          href: "#",
+                      },
+                      { item: "Infrared sauna", href: "#" },
+                      { item: "Sclerotherapy", href: "#" },
+                  ],
+              },
+              {
+                  triggerName: "Concerns",
+                  elements: [
+                      {
+                          label: "Face",
+                          href: "#",
+                      },
+                      { item: "Acne", href: "/en/concern/acne" },
+                      { item: "Scars", href: "/en/concern/scars" },
+                      { item: "Double chin", href: "/en/concern/double-chin" },
+                      { item: "Hairiness", href: "/en/concern/hairiness" },
+                      { item: "Skin laxity", href: "/en/concern/skin-laxity" },
+                      { item: "Wrinkles and fine lines", href: "#" },
+                      { item: "Rosacea", href: "/en/concern/rosacea" },
+                      {
+                          item: "Pigment spots",
+                          href: "/en/concern/pigment-spots",
+                      },
+                      {
+                          item: "Dull complexion",
+                          href: "/en/concern/dull-complexion",
+                      },
+                      {
+                          item: "Telangiectasias",
+                          href: "/en/concern/telangiectasias",
+                      },
+                      {
+                          label: "Body",
+                          href: "#",
+                      },
+                      { item: "Acne", href: "/en/concern/acne" },
+                      { item: "Cellulite", href: "/en/concern/cellulite" },
+                      { item: "Scars", href: "/en/concern/acne" },
+                      { item: "Hairiness", href: "/en/concern/hairiness" },
+                      { item: "Skin laxity", href: "/en/concern/skin-laxity" },
+                      {
+                          item: "Pigment spots",
+                          href: "/en/concern/pigment-spots",
+                      },
+                      {
+                          item: "Varicose veins",
+                          href: "/en/concern/varicose-veins",
+                      },
+
+                      {
+                          item: "Stretch marks",
+                          href: "/en/concern/stretch-marks",
+                      },
+                  ],
+              },
+              {
+                  triggerName: "Our promotions",
+                  href: "/en/promotions",
+              },
+              {
+                  triggerName: "About",
+                  elements: [
+                      {
+                          label: "Our doctors",
+                          href: "/en/our-doctors",
+                      },
+                      {
+                          label: "Our team",
+                          href: "#",
+                      },
+                      {
+                          label: "Our clinic",
+                          href: "/en/our-clinic",
+                      },
+                      {
+                          label: "Your consultation",
+                          href: "/en/your-consultation",
+                      },
+                  ],
+              },
+              {
+                  triggerName: "Contact us",
+                  href: "#",
+              },
+              {
+                  triggerName: "FR",
+                  href: alternateHref,
+              },
+          ];
+---
+
+<!doctype html>
+<html lang={language}>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+
+        <!-- SEO Meta Tags -->
+        <meta name="robots" content={metaRobotsDirective ?? "index, follow"} />
+        <meta name="keywords" content={keywords} />
+        <meta name="author" content="Centre médico-esthétique Idyllium" />
+        <link rel="canonical" href={canonical} />
+        <link rel="alternate" hreflang={alternateLang} href={alternate} />
+        <meta
+            name="x-robots-tag"
+            content={metaRobotsDirective ?? "index, follow"}
+        />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- Open Graph Meta Tags for Social Media -->
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={clinique.src} />
+        <meta property="og:url" content={currentHref} />
+        <meta property="og:type" content="website" />
+
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={clinique.src} />
+
+        <!-- Additional Meta Tags -->
+        <meta name="theme-color" content="#ffffff" />
+        <!-- <link rel="manifest" href="/site.webmanifest" /> -->
+    </head>
+    <body>
+        <Menu headerItems={headerItems} />
+        <slot />
+        <CTA
+            title={ctaTitle}
+            description={ctaDescription}
+            buttonText={ctaButtonText}
+            href={ctaHref}
+        />
+        <Footer footerItems={footerItems} homeHref={homeHref} />
+        <script
+            src="https://connect.podium.com/widget.js#ORG_TOKEN=4db7151f-cc05-4a5f-aa06-8d951ef0e48e"
+            id="podium-widget"
+            data-organization-api-token="4db7151f-cc05-4a5f-aa06-8d951ef0e48e"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://www.googletagmanager.com/gtag/js?id=GT-KT9BKJ3F"
+            id="google_gtagjs-js"
+            async=""></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(...args: any[]) {
+                window.dataLayer.push(args);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "GT-KT9BKJ3F");
+        </script>
+    </body>
+</html>

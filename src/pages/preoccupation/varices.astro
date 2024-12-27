@@ -1,0 +1,170 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import varicesBG from "@/images/varices-bg.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import Card from "@/components/Card.astro";
+import GradientSection from "@/components/GradientSection.astro";
+import ImageCard from "@/components/ImageCard.astro";
+import varices from "@/images/varices.webp";
+import sclerotherapie from "@/images/sclerotherapie.webp";
+import PageBackground from "@/components/PageBackground.astro";
+---
+
+<Layout
+    language="fr"
+    title="Télangiectasies | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/preoccupation/varices"
+    alternateHref="/en/concern/varices"
+>
+    <main>
+        <PageBackground
+            src={varicesBG.src}
+            section="Préoccupation"
+            title="Varices"
+        />
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <div class="text-center p-5 md:p-8 lg:p-12 max-w-9xl container">
+                <h2 class="uppercase font-black py-5">
+                    Les Varices, qu’est-ce que c’est?
+                </h2>
+                <p class="text-muted-foreground">
+                    <span
+                        >On parle de varices lorsque des veines forment un
+                        relief apparent sous la peau. Elles sont essentiellement
+                        localisées sur les jambes, en particulier chez les
+                        femmes. Les varices signalent un problème de circulation
+                        veineuse et sont souvent associées à une sensation de
+                        jambes lourdes. Elles sont dues à la perte d’élasticité
+                        des parois veineuses et l’élargissement des veines par
+                        effet de vieillissement, ou bien à des lésions des
+                        valvules veineuses, les petits clapets situés dans les
+                        veines des jambes et qui empêchent le sang de
+                        redescendre.
+                    </span>
+                </p>
+            </div>
+
+            <CustomSeparator />
+
+            <h2 class="uppercase font-black py-5 text-center">
+                Les différents types de varices
+            </h2>
+            <div
+                class="grid grid-cols-1 lg:grid-cols-3 gap-12 py-28 text-white text-center"
+            >
+                <Card
+                    title="Les varices saphènes"
+                    description="Les varices visibles sont le plus souvent liées au mauvais fonctionnement des veines principales des jambes appelées veine grande saphène et veine petite saphène. Celle-ci sont le plus souvent invisibles car situées sous la peau, jusqu'à 2 cm de profondeur. La grande saphène débute à la cheville et remonte à l'intérieur de la jambe jusqu'au pli de l'aine. La veine petite saphène, Plus courte, elle débute vers le talon et se termine au pli derrière le genou ; parfois elle va plus haut dans la cuisse."
+                />
+                <Card
+                    title="Les autres varices dites accessoires ou tributaires"
+                    description="Les autres varices peuvent être des branches d'une veine saphène ou être indépendantes. Leur taille est variable, elles peuvent être très grosses. Parfois elles se dilatent sur un court segment, on parle alors de dilatation ampullaire ou d'ectasie. Ces dilatations sont à plus haut risque de survenue d'une paraphlébite (thrombose veineuse superficielle) ou d'une rupture accidentelle."
+                />
+                <Card
+                    title="Les télangiectasies ou varicosités"
+                    description="Ce sont des dilatations de vaisseaux très fins juste sous la peau. Ces dilatations concernent des veinules (très petites veines), mais aussi des capillaires et des artérioles (très petites artères). Elles peuvent être situées aussi au niveau du visage. Les varicosités et télangiectasies participent peu aux douleurs mais sont surtout inesthétiques."
+                />
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        Comment peut-on prévenir les varices?
+                    </h2>
+                    <div>
+                        <p class="text-muted-foreground">
+                            On ne peut prévenir totalement l’apparition des
+                            varices, surtout lorsque l’hérédité entre en jeu. Il
+                            est toutefois possible de diminuer leur évolution
+                            grâce à quelques mesures relativement simples :
+                        </p>
+                        <ul
+                            class="list-disc list-inside text-xl text-muted-foreground"
+                        >
+                            <li>Maintenir un poids santé</li>
+                            <li>Avoir un mode de vie actif</li>
+                            <li>
+                                Consommer des aliments riches en fibres et
+                                pauvres en sodium
+                            </li>
+                        </ul>
+                        <h3 class="uppercase font-black py-5">
+                            De plus, on peut minimiser l’inconfort des varices
+                            déjà existantes de plusieurs manières :
+                        </h3>
+                        <ul
+                            class="list-disc list-inside text-xl text-muted-foreground"
+                        >
+                            <li>
+                                Surélever ses jambes plusieurs fois par jour, et
+                                dormir en les surélevant légèrement (par exemple
+                                en plaçant un oreiller sous le matelas
+                            </li>
+                            <li>
+                                Lorsqu’on doit rester dans la même position
+                                longtemps, penser à faire des étirements
+                                fréquemment
+                            </li>
+                            <li>
+                                Éviter les endroits très chauds : spa, sauna,
+                                salons de bronzage, épilation à la cire chaude,
+                                bains de soleil prolongés, etc.
+                            </li>
+                            <li>Mettre de l’eau froide sur les jambes</li>
+                            <li>Éviter les chaussures à talons</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={varices}
+                                alt="varices"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <GradientSection
+            title="Vous souffrez des varices?"
+            description="La Clinique Idyllium vous propose différents traitements contre taches pigmentaires. Réservez une consultation gratuite avec nos spécialistes pour vous trouver un plan de traitement efficace adapté à votre peau."
+            buttonText="Réservez une consultation"
+            href="#"
+        />
+
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <h1 class="text-center uppercase my-5">
+                Qu'offrons-nous pour traiter les varices?
+            </h1>
+            <h2 class="uppercase text-center">Nos solutions</h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+            >
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={sclerotherapie}
+                            alt=""
+                            title="Sclérothérapie"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Améliorez l'apparence de vos veines
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

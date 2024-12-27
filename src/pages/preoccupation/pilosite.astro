@@ -1,0 +1,111 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import pilositeBG from "@/images/pilosite-bg.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import Card from "@/components/Card.astro";
+import GradientSection from "@/components/GradientSection.astro";
+import ImageCard from "@/components/ImageCard.astro";
+import epilation from "@/images/epilation.webp";
+import PageBackground from "@/components/PageBackground.astro";
+---
+
+<Layout
+    language="fr"
+    title="Pilosité | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/preoccupation/pilosite"
+    alternateHref="/en/concern/hair"
+>
+    <main>
+        <PageBackground
+            src={pilositeBG.src}
+            section="Préoccupation"
+            title="Pilosité"
+        />
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <div class="text-center p-5 md:p-8 lg:p-12 max-w-9xl container">
+                <h2 class="uppercase font-black py-5">
+                    Pilosité, qu’est-ce que c’est?
+                </h2>
+                <p class="text-muted-foreground">
+                    <span
+                        >Oubliez le rasage, oubliez l'épilation à la cire et
+                        oubliez définitivement les pinces à épiler et les crèmes
+                        salissantes - vous voulez vous concentrer sur
+                        l'épilation au laser. Les poils indésirables peuvent
+                        être trouvés dans de nombreux endroits du corps. Les
+                        hommes et les femmes recherchent l'épilation afin de
+                        gagner en confiance et de se sentir plus à l'aise avec
+                        leur apparence.
+                    </span>
+                </p>
+            </div>
+
+            <CustomSeparator />
+
+            <div class="text-center">
+                <h2 class="uppercase font-black py-5 text-center">
+                    Le poil passe par 3 phases de vie
+                </h2>
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-3 gap-12 py-28 text-white text-center"
+                >
+                    <Card
+                        title="1"
+                        description="une phase anagène : phase de croissance du poil dure de 1 à 3 mois, epilation laser efficace"
+                    />
+                    <Card
+                        title="2"
+                        description="une phase catagène : une phase de transition au cours de laquelle les mitoses cessent et le follicule diminue de volume en montant dans le derme moyen. Le début de (l’involution du poil, dure 2 à 3 semaines, epilation laser inefficace."
+                    />
+                    <Card
+                        title="3"
+                        description="une phase télogène : phase de repos aboutit à la chute, dure de 3 mois, epilation laser inefficace"
+                    />
+                </div>
+                <p class="text-muted-foreground">
+                    Manque de sommeil, froid, alimentation déséquilibrée, stress
+                    ou encore dérèglement hormonal, nombreuses sont les causes
+                    d’un teint terne et fatigué. Concrètement, c’est en fait la
+                    qualité de votre peau qui est altérée à cause des cellules
+                    mortes ou des impuretés qui s’accumulent au fil du temps.
+                    Résultat ? Votre teint est moins homogène et présente des
+                    irrégularités.
+                </p>
+            </div>
+
+            <CustomSeparator />
+        </div>
+        <GradientSection
+            title="Vous souffrez de la pilosité?"
+            description="La Clinique Idyllium vous propose efficace contre la pilosité. Réservez une consultation gratuite avec nos spécialistes pour vous trouver un plan de traitement efficace adapté à votre peau."
+            buttonText="Réservez une consultation"
+            href="#"
+        />
+
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <h1 class="text-center uppercase my-5">
+                Qu'offrons-nous pour traiter la pilosité?
+            </h1>
+            <h2 class="uppercase text-center">Nos solutions</h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+            >
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={epilation}
+                            alt=""
+                            title="Épilation au laser"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Obtenez une peau lisse et soyeuse
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

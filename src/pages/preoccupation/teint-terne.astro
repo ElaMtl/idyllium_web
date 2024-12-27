@@ -1,0 +1,197 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import teintTerneBG from "@/images/teint-terne-bg.webp";
+import teintTerne from "@/images/teint-terne.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import Card from "@/components/Card.astro";
+import { Accordion } from "@/components/Accordion";
+import GradientSection from "@/components/GradientSection.astro";
+import ImageCard from "@/components/ImageCard.astro";
+import peeling from "@/images/peeling_chimique.webp";
+import belaMD from "@/images/bela-md.webp";
+import laser from "@/images/laser.webp";
+import PageBackground from "@/components/PageBackground.astro";
+
+const data = [
+    {
+        title: "Un style de vie plus sain",
+        description: [
+            "Le teint terne est souvent le reflet d’une mauvaise hygiène de vie ou d’un rythme effréné. Pour améliorer l’éclat de votre peau, commencez par retrouver un sommeil régulier.",
+        ],
+    },
+    {
+        title: "Dormir",
+        description: [
+            "Votre teint fatigué est peut-être dû à… votre fatigue. Huit heures de sommeil ne sont pas un luxe pour le corps, mais une nécessité pour l’aider à se régénérer. Bien dormir vous apportera énergie et teint éclatant de santé.",
+        ],
+    },
+    {
+        title: "L’exfoliation",
+        description: [
+            "Gommer sa peau booste le phénomène de desquamation naturelle : les cellules mortes qui brouillent la carnation se détachent des couches superficielles et laissent le champ libre à des cellules plus jeunes.",
+        ],
+    },
+    {
+        title: "Boostent la circulation sanguine et lymphatique",
+        description: [
+            "Le matin, prenez 5 minutes pour réveiller votre peau en la massant avec des mouvements circulaires doux",
+        ],
+    },
+];
+---
+
+<Layout
+    language="fr"
+    title="Teint Terne | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/preoccupation/teint-terne"
+    alternateHref="/en/concern/dull-skin"
+>
+    <main>
+        <PageBackground
+            src={teintTerneBG.src}
+            section="Préoccupation"
+            title="Teint Terne"
+        />
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <div class="text-center p-5 md:p-8 lg:p-12 max-w-9xl container">
+                <h2 class="uppercase font-black py-5">
+                    Le Teint Terne, qu’est-ce que c’est?
+                </h2>
+                <p class="text-muted-foreground">
+                    <span
+                        >La peau déshydratée n’a pas assez d’eau dans le derme,
+                        ce qui provoque des ridules prématurées et un teint
+                        terne. En soin de la peau, la matité désigne
+                        essentiellement un manque d'éclat ou une incapacité à
+                        bien réfléchir la lumière. La peau terne peut apparaître
+                        sèche, inégale, cendrée ou terne. De plus, la matité
+                        s'accompagne souvent d'une texture de peau inégale car
+                        la peau texturée est moins capable de réfléchir la
+                        lumière de manière uniforme.
+                    </span>
+                </p>
+            </div>
+
+            <CustomSeparator />
+
+            <h2 class="uppercase font-black py-5 text-center">
+                Qu’est-ce qui peut causer Le Teint Terne?
+            </h2>
+            <p class="text-muted-foreground text-center">
+                Manque de sommeil, froid, alimentation déséquilibrée, stress ou
+                encore dérèglement hormonal, nombreuses sont les causes d’un
+                teint terne et fatigué. Concrètement, c’est en fait la qualité
+                de votre peau qui est altérée à cause des cellules mortes ou des
+                impuretés qui s’accumulent au fil du temps. Résultat ? Votre
+                teint est moins homogène et présente des irrégularités.
+            </p>
+            <div
+                class="grid grid-cols-1 lg:grid-cols-3 gap-12 py-28 text-white text-center"
+            >
+                <Card
+                    title="Déshydratation"
+                    description="Si vous ne buvez pas assez d’eau, cela affectera probablement l’apparence de votre peau. En fait, une étude de 2015 a révélé un lien étroit entre le fait de boire suffisamment d’eau et d’avoir une peau saine. Boire beaucoup d’eau aidera à stimuler l’hydratation depuis les couches sous-cutanées de votre peau. De plus, l’application d’un sérum hydratant pour le visage peut aider à fixer la teneur en eau dans les couches supérieures de votre peau."
+                />
+                <Card
+                    title="Manque de crème hydratante"
+                    description="Le fait de ne pas utiliser de crème hydratante, surtout si votre peau a tendance à être sèche, peut affecter la santé et la vitalité de votre peau. L’utilisation d’une crème hydratante deux fois par jour peut aider à hydrater votre peau et à protéger la délicate couche supérieure."
+                />
+                <Card
+                    title="Accumulation de cellules mortes"
+                    description="Votre peau se débarrasse naturellement et régulièrement des cellules mortes pour laisser la place à de nouvelles cellules. Mais parfois, les cellules mortes ne sont pas éliminées comme elles le devraient. Au lieu de cela, elles s’accumulent à la surface de votre peau. La peau peut alors être sèche, terne, squameuse et rêche."
+                />
+                <Card
+                    title="Sécheresse"
+                    description="Une peau sèche peut rapidement prendre l’apparence d’une peau terne et sans vie. C’est particulièrement vrai si vous travaillez dans une salle climatisée toute la journée ou si le climat est très peu humide"
+                />
+                <Card
+                    title="Vieillissement"
+                    description="Le vieillissement est un élément inévitable de la vie. Le vieillissement de la peau aussi. Et si vous ne pouvez pas contrôler le processus de vieillissement, vous pouvez adopter une routine de soins de la peau qui contribue à fournir à votre peau la nourriture et l’hydratation dont elle a besoin pour rester saine et dynamique."
+                />
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        Comment peut-on prévenir le teint terne?
+                    </h2>
+                    <div class="relative">
+                        <Accordion client:load data={data} />
+                    </div>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={teintTerne}
+                                alt="teint terne"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <GradientSection
+            title="Vous souffrez du teint terne?"
+            description="La Clinique Idyllium vous propose différents traitements contre l'acné. Réservez une consultation gratuite avec nos spécialistes pour vous trouver un plan de traitement efficace adapté à votre peau."
+            buttonText="Réservez une consultation"
+            href="#"
+        />
+
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <h1 class="text-center uppercase my-5">
+                Qu'offrons-nous pour traiter le teint terne?
+            </h1>
+            <h2 class="uppercase text-center">Nos solutions</h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+            >
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={peeling}
+                            alt=""
+                            title="Peeling chimique"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Améliorez l’apparence de votre peau
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard src={belaMD} alt="" title="Bela MD" />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Pour une peau clarifiée, rafraîchie et lumineuse
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={laser}
+                            alt=""
+                            title="IPL Thérapie au laser Icon®"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Rajeunissement et correction des imperfections de la
+                        peau
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

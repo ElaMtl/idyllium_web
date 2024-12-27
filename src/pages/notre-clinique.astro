@@ -1,0 +1,370 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import notreClinique from "@/images/notre-clinique.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import clinique2 from "@/images/clinique2.webp";
+import traitements from "@/images/traitements.webp";
+import Button from "@/components/Button.astro";
+import medecins2 from "@/images/medecins2.webp";
+import ImageCard from "@/components/ImageCard.astro";
+import laserIcon from "@/images/laser.webp";
+import toxine from "@/images/toxine-botulinique.webp";
+import agents from "@/images/agents-comblement.webp";
+import belaMD from "@/images/bela-md.webp";
+import endermologie from "@/images/endermologie.webp";
+import epilation2 from "@/images/epilation2.webp";
+import lipomassage from "@/images/lipomassage.webp";
+import raffermissementFlexsure from "@/images/raffermissement-flexsure.webp";
+import raffermissementTempsure from "@/images/raffermissement-tempsure.webp";
+import PageBackground2 from "@/components/PageBackground2.astro";
+---
+
+<Layout
+    language="fr"
+    title="Notre Clinique | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/notre-clinique"
+    alternateHref="/en/our-clinic"
+>
+    <main>
+        <PageBackground2
+            src={notreClinique.src}
+            section="La clinique Idyllium"
+            title="Clinique médico-esthétique de rajeunissement et raffermissement cutané"
+        />
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <h1 class="text-center uppercase my-5">Qu'est-ce que Idyllium?</h1>
+            <p class="text-center text-muted-foreground lg:px-32">
+                <span class="block"
+                    >Certains pourraient dire que ce n’est qu’une autre clinique
+                    médico-esthétique parmi tant d’autres.</span
+                >
+                <span class="block"
+                    >Notre Clinique était créé avec le but d’offrir des services
+                    médico-esthétique, mais, avant tout, la possibilité de
+                    régler des problèmes. Souvent les gens ne savent pas
+                    nécessairement de quoi exactement ils ont besoin, et même
+                    quand ils en ont une idée, ce qu’ils ont en tête n’est pas
+                    toujours la meilleure solution pour eux.
+                </span>
+                <span class="block"
+                    >Notre but est vraiment de trouver la meilleure solution
+                    pour chaque personne qui en a besoin!
+                </span>
+                <span class="block"
+                    >À la clinique Idyllium vous obtenez de beaux résultats
+                    naturels en choisissant une approche 360° (qui ne se
+                    constitue pas seulement d’injectables) . Vous collaborez
+                    avec des professionnels honnêtes qui sauront ne pas
+                    seulement vous écouter attentivement, mais bien étudier
+                    votre profil pour vous aider à atteindre les meilleurs
+                    résultats qui soient.
+                </span>
+            </p>
+
+            <div class="flex items-center justify-center mt-5">
+                <a
+                    href="https://www.bestinmtl.com/best-places-for-lip-fillers-montreal/"
+                    target="_blank"
+                >
+                    <img
+                        src="https://i.imgur.com/H3OEW7U.png"
+                        alt="Best in Montreal Badge"
+                        style="width: 150px; height: auto;"
+                    />
+                </a>
+            </div>
+
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">Notre but</h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            Notre but est vraiment de trouver la meilleure
+                            solution pour chaque personne qui en a besoin! Nous
+                            voulons tout d’abord jouer un rôle de guide, et
+                            seulement par la suite celui de praticien.
+                        </span>
+                        <span class="block">
+                            Nous aimerions aussi souligner un aspect très
+                            important, qui est rarement discuté - c’est le
+                            bonheur qu’une personne acquiert avec l’amélioration
+                            de son aspect physique.
+                        </span>
+                        <span class="block">
+                            Des fois l’effet psychologique suite à un traitement
+                            est même plus grand que les modifications apportées
+                            à l’apparence d’une certaine personne! Ici on parle
+                            de l’amélioration de l’estime de soi, de meilleure
+                            humeur, du débarras d’une insécurité, d’augmentation
+                            de confiance en soi, etc. Tous ces changements
+                            augmentent la qualité de vie d’une personne et par
+                            conséquent de ceux qui l’entourent.
+                        </span>
+                        <span class="block">
+                            Nous croyons que chaque cas traité représente sa
+                            propre petite histoire, c’est pour toutes ces
+                            raisons que nous vous invitons chez nous pour
+                            ensemble continuer à écrire votre belle histoire!
+                        </span>
+                    </p>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={clinique2}
+                                alt="clinique"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={traitements}
+                                alt="traitements"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center p-3">
+                    <p class="text-muted-foreground">
+                        <span>
+                            Nous offrons une gamme complète de traitements afin
+                            de vous aider à réellement atteindre vos objectifs
+                            beauté. À la Clinique Idyllium, nous offrons les
+                            traitements suivans pour le visage et le corps:
+                        </span>
+                    </p>
+                    <ul
+                        class="list-disc list-inside text-xl text-muted-foreground"
+                    >
+                        <li>Les Injectables</li>
+                        <li>
+                            Raffermissement cutané (“lifting” par
+                            radiofréquence)
+                        </li>
+                        <li>Photorajeunissement (IPL)</li>
+                        <li>Traitement des taches brunes indésirables</li>
+                        <li>Réduction des Rides</li>
+                        <li>Traitement de Rosacée</li>
+                        <li>
+                            Traitement des petits vaisseaux sanguins
+                            (capillaires)
+                        </li>
+                        <li>Élimination de Cicatrices au Laser</li>
+                        <li>Élimination/Réduction de Cellulite</li>
+                        <li>Élimination de Vergetures</li>
+                        <li>Renouvellement de la Peau au Laser</li>
+                        <li>Photoépilation</li>
+                    </ul>
+                </div>
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full">
+                <div class="flex flex-row justify-center order-1 md:order-1">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain w-[650px] bg-border"
+                                src={medecins2}
+                                alt="medecins"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col justify-center order-1 md:order-none p-3"
+                >
+                    <h2 class="uppercase font-black py-5">Nos medecins</h2>
+                    <p class="text-muted-foreground">
+                        <span
+                            >Nos médecins, Drs Vitalie et Tatiana Sirbu, ont
+                            passé les 20 dernières années de leur carrière à
+                            perfectionner leur approche pour les traitements
+                            médico-esthétiques.
+                        </span>
+                        <span class="block"
+                            >En ayant fait leurs études en médecine d’abord en
+                            Europe et par la suite ici au Canada et en
+                            travaillant dans le domaine de l’esthétique à ces
+                            deux endroits, ils ont un grand bagage de
+                            connaissances.
+                        </span>
+                        <span class="block"
+                            >Après s’être formés dans la sphère de la médecine
+                            esthétique en Moldavie, en Russie, à Monaco et en
+                            France, les Drs Sirbu veulent maintenant amener une
+                            nouvelle approche à l’esthétique à leurs clients
+                            ici, en Montérégie, QC.
+                        </span>
+                        <span class="block"
+                            >En ayant les connaissances de ces deux mondes,
+                            Vitalie et Tatiana ont décidé de fusionner ce qui se
+                            fait au Canada avec ce qui se fait en Europe, pour
+                            que ces deux approches puissent se compléter et
+                            donner de meilleurs résultats.
+                        </span>
+                        <span class="block"
+                            >La raison pour laquelle nos médecins ont décidé de
+                            former la Clinique Idyllium est pour combiner les
+                            meilleures approches de l’esthétique du monde, avec
+                            bien sûr le travail fait par les esthéticiennes et
+                            les options de traitements avancés qui peuvent être
+                            offertes seulement par les médecins.
+                        </span>
+                    </p>
+                    <div class="flex items-center justify-center py-20">
+                        <Button href="#" text="Réservez une consultation" />
+                    </div>
+                </div>
+            </div>
+            <CustomSeparator />
+
+            <h1 class="text-center uppercase my-5">Nos traitements</h1>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+            >
+                <div>
+                    <a href="#">
+                        <ImageCard src={belaMD} alt="" title="Bela MD" />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Pour une peau clarifiée, rafraîchie et lumineuse
+                    </p>
+                </div>
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={agents}
+                            alt=""
+                            title="Agents de comblement"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Un “lifting” sans chirurgie
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={toxine}
+                            alt=""
+                            title="Injectables - Toxine Botulinique"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Pour votre apparence détendue, plus sereine et reposée
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={laserIcon}
+                            alt=""
+                            title="IPL Thérapie au laser Icon®"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Rajeunissement et correction des imperfections de la
+                        peau
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={epilation2}
+                            alt=""
+                            title="Épilation au laser"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Obtenez une peau lisse et soyeuse
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={endermologie}
+                            alt=""
+                            title="Endermologie visage"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Raffermissement de la peau et traitement des rides
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={lipomassage}
+                            alt=""
+                            title="Lipomassage endermologie corps"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Sculptez et modelez votre corps à la perfection
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={raffermissementFlexsure}
+                            alt=""
+                            title="Raffermissement de la peau Flexsure"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Remodelage du corps et élimination des graisses
+                    </p>
+                </div>
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={raffermissementTempsure}
+                            alt=""
+                            title="Raffermissement de la peau Tempsure™ Envi"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Lifting du visage et du corps non chirurgical
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

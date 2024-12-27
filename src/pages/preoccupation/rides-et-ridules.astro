@@ -1,0 +1,273 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import ridlesEtRidulesBG from "@/images/rides-et-ridules-bg.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import Card from "@/components/Card.astro";
+import GradientSection from "@/components/GradientSection.astro";
+import ImageCard from "@/components/ImageCard.astro";
+import peeling from "@/images/peeling_chimique.webp";
+import belaMD from "@/images/bela-md.webp";
+import ridesEtRidules from "@/images/rides-et-ridules.webp";
+import endermologie from "@/images/endermologie.webp";
+import laserIcon from "@/images/laser.webp";
+import toxine from "@/images/toxine-botulinique.webp";
+import agents from "@/images/agents-comblement.webp";
+import soinsFaciaux from "@/images/soins-faciaux.webp";
+import PageBackground from "@/components/PageBackground.astro";
+---
+
+<Layout
+    language="fr"
+    title="Rides et ridules | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/preoccupation/rides-et-ridules"
+    alternateHref="/en/concern/wrinkles-and-fine-lines"
+>
+    <main>
+        <PageBackground
+            src={ridlesEtRidulesBG.src}
+            section="Préoccupation"
+            title="Rides et ridules"
+        />
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <div class="text-center p-5 md:p-8 lg:p-12 max-w-9xl container">
+                <h2 class="uppercase font-black py-5">
+                    Les rides et ridules, qu’est-ce que c’est?
+                </h2>
+                <p class="text-muted-foreground">
+                    <span
+                        >Chacun définit les rides à sa manière, certains disent
+                        que c’est une marque de sagesse, d’autres les
+                        considèrent comme un problème.
+                    </span>
+                    <span class="block"
+                        >En soit, les rides sont des plis et les creux qui se
+                        forment dans la peau lorsqu’elle vieillit et perd de son
+                        collagène naturel. Le collagène est une protéine qui
+                        joue un rôle déterminant dans l’apparence et la santé de
+                        la peau. Il l’empêche de se relâcher, lui permet
+                        d’absorber l’eau plus facilement et l’aide à se
+                        régénérer. C’est généralement lui qui donne à la peau sa
+                        fermeté, sa souplesse et son éclat.
+                    </span>
+                    <span class="block"
+                        >Les rides se manifestent d'abord sous la forme de
+                        ridules, plus petites, et deviennent des rides lorsque
+                        leur profondeur atteint 1 millimètre.
+                    </span>
+                </p>
+            </div>
+
+            <CustomSeparator />
+
+            <h2 class="uppercase font-black py-5 text-center">
+                Qu’est-ce qui peut causer les rides et ridules?
+            </h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-28 text-white text-center"
+            >
+                <Card
+                    title=""
+                    description="Il y a les rides d’expression, qui dépendent de notre mimique, comme les rides sur le front à cause qu’on fronce beaucoup les sourcils, et de nos habitudes quotidiennes, comme les rides autour de la bouche chez les fumeurs."
+                />
+                <Card
+                    title=""
+                    description="Le soleil est LE plus grave et le plus important facteur du vieillissement cutané. Une trop grande exposition au soleil quotidienne, et donc aux rayons ultraviolets, détruit les fibres de collagène et d’élastine et par ce fait ralentit aussi leur fabrication dans notre peau et fragilise ses cellules."
+                />
+                <Card
+                    title=""
+                    description="La pollution atmosphérique diminue le système immunitaire de la peau et donc accélère son vieillissement."
+                />
+                <Card
+                    title=""
+                    description="Le stress cause la formation d’une plus grande quantité de radicaux libres dans notre organisme, il est donc aussi responsables du vieillissement prématuré des cellules."
+                />
+                <Card
+                    title=""
+                    description="Le manque d’hydratation chez une personne cause la déshydratation de sa peau, qui devient moins bombée et plus fragile, ce qui laisse place aux rides et ridules."
+                />
+                <Card
+                    title=""
+                    description="Finalement, le manque de sommeil, tout comme le stress, cause la formation d’une plus grande quantité de radicaux libres dans notre organisme menant au vieillissement prématuré des cellules."
+                />
+                <Card
+                    title=""
+                    description="Les facteurs internes les plus importants sont le vieillissement cellulaire naturel (génétiquement déterminé), le stress oxydatif et le vieillissement hormonal."
+                />
+                <Card
+                    title=""
+                    description="Le vieillissement cellulaire naturel survient avec le temps, les mécanismes du maintien de la peau de notre organisme changent. Cela signifie que le rythme du renouvellement des cellules ralentit, l’activité des glandes sébacées et sudorales diminue, la peau perd en élasticité. Donc la peau se régénère moins rapidement, est moins hydratée et nourrie et moins tendue, ce qui laisse place aux rides et ridules."
+                />
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        Comment peut-on prévenir les rides et ridules?
+                    </h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            De nos jours, on entend parler partout de comment
+                            combattre les rides, mais un peu moins de comment
+                            les prévenir. Bien sûr, un jour on en aura tous,
+                            mais on peut éloigner ce jour. Il n’y a pas de
+                            solution miracle, mais il y a certaines habitudes
+                            qu’on peut prendre pour arriver à ce but.
+                        </span>
+                        <span class="block"
+                            >Tout d'abord, il faut bien prendre soin de notre
+                            peau, la nettoyer, l’hydrater, la nourrir, bref, lui
+                            donner tout ce dont elle a besoin.
+                        </span>
+                        <span class="block"
+                            >Plusieurs ne réalisent pas à quel point c’est
+                            important, mais il faut protéger notre peau du
+                            soleil le plus possible! L’utilisation d’une crème
+                            solaire, d’un fiiltre solaire ou d’un écran solaire
+                            quotidienne est très essentielle pour combattre
+                            l’apparition des rides.
+                        </span>
+                        <span class="block"
+                            >Par la suite, il faut adopter une bonne hygiène de
+                            vie. Ici on parle d’un bon sommeil, de la réduction
+                            des mauvaises habitudes de vie et du stress, d’une
+                            alimentation saine, etc. Un corps en santé vient
+                            avec une peau en santé!
+                        </span>
+                        <span class="block"
+                            >Finalement, le conseil le moins répandu, mais qui
+                            pourtant peut faire une énorme différence, c’est
+                            d’aider son collagène dès un jeune âge. En effet,
+                            notre niveau de collagène commence à diminuer dès
+                            l’âge de 25, c’est le début du vieillissement de la
+                            peau. Si on commence à prendre des suppléments, à
+                            faire des masques ou à recevoir des traitements pour
+                            stimuler la production de cette protéine jeune,
+                            notre peau va vieillir beaucoup plus lentement.
+                        </span>
+                    </p>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={ridesEtRidules}
+                                alt="rides et ridules"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <GradientSection
+            title="Vous souffrez des rides et ridules?"
+            description="La Clinique Idyllium vous propose différents traitements contre les rides et ridules. Réservez une consultation gratuite avec nos spécialistes pour vous trouver un plan de traitement efficace adapté à votre peau."
+            buttonText="Réservez une consultation"
+            href="#"
+        />
+
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <h1 class="text-center uppercase my-5">
+                Qu'offrons-nous pour traiter les rides et ridules?
+            </h1>
+            <h2 class="uppercase text-center">Nos solutions</h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+            >
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={endermologie}
+                            alt=""
+                            title="Endermologie visage"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Raffermissement de la peau et traitement des rides
+                    </p>
+                </div>
+                <div>
+                    <a href="#">
+                        <ImageCard src={belaMD} alt="" title="Bela MD" />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Pour une peau clarifiée, rafraîchie et lumineuse
+                    </p>
+                </div>
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={laserIcon}
+                            alt=""
+                            title="IPL Thérapie au laser Icon®"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Rajeunissement et correction des imperfections de la
+                        peau
+                    </p>
+                </div>
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={agents}
+                            alt=""
+                            title="Agents de comblement"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Un “lifting” sans chirurgie
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={toxine}
+                            alt=""
+                            title="Injectables - Toxine Botulinique"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Pour votre apparence détendue, plus sereine et reposée
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={peeling}
+                            alt=""
+                            title="Peeling chimique"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Améliorez l’apparence de votre peau
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={soinsFaciaux}
+                            alt=""
+                            title="Soins faciaux"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Repulpéz, lisséz et parfaitement hydratéz votre peau
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

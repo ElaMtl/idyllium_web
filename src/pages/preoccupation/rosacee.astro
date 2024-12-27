@@ -1,0 +1,192 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import rosaceeBG from "@/images/rosacee-bg.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import CardList from "@/components/CardList.astro";
+import GradientSection from "@/components/GradientSection.astro";
+import ImageCard from "@/components/ImageCard.astro";
+import rosacee from "@/images/rosacee.webp";
+import laserIcon from "@/images/laser.webp";
+import PageBackground from "@/components/PageBackground.astro";
+---
+
+<Layout
+    language="fr"
+    title="Rosacée | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/preoccupation/rosacee"
+    alternateHref="/en/concern/rosacea"
+>
+    <main>
+        <PageBackground
+            src={rosaceeBG.src}
+            section="Préoccupation"
+            title="Rosacée"
+        />
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <div class="text-center p-5 md:p-8 lg:p-12 max-w-9xl container">
+                <h2 class="uppercase font-black py-5">
+                    La rosacée, qu’est-ce que c’est?
+                </h2>
+                <p class="text-muted-foreground">
+                    <span
+                        >La rosacée est une anomalie de la peau circulatoire
+                        c’est à dire qu’elle a rapport à la circulation sanguine
+                        de la peau et qu’elle cause des rougeurs. Cette
+                        affection touche généralement le visage principalement
+                        les joues, le nez, le menton et le front, mais elle peut
+                        aussi descendre jusqu’au cou et affecter les yeux.
+                    </span>
+                    <span class="block"
+                        >Cette “maladie” de la peau peut commencer à atteindre
+                        les adultes prédisposés dès l’âge de 20 ans et le pic de
+                        fréquence est entre 30 et 50 ans.
+                    </span>
+                </p>
+            </div>
+
+            <CustomSeparator />
+
+            <h2 class="uppercase font-black py-5 text-center">
+                Quels sont les types de rosacée?
+            </h2>
+            <p class="text-muted-foreground text-center">
+                <span
+                    >La rosacée se manifeste sous la forme de rougeurs et de
+                    boutons au visage.
+                </span>
+                <span class="block"
+                    >Normalement, cette anomalie chronique évolue en plusieurs
+                    étapes, mais dépendamment d’une personne à l’autre ne va pas
+                    nécessairement passer par tous les stades.
+                </span>
+            </p>
+            <div
+                class="grid grid-cols-1 lg:grid-cols-3 gap-12 py-28 text-white text-center"
+            >
+                <CardList
+                    title="Érythémato-télangiectasique (ou vasculaire)"
+                    descriptions={[
+                        "rougeurs occasionnelles et temporaires au visage",
+                        "oedème au visage (gonflement)",
+                        "télangiectasies (petits vaisseaux apparents)",
+                        "sensation de brûlure",
+                        "peau sèche",
+                    ]}
+                />
+                <CardList
+                    title="Papulopustuleuse"
+                    descriptions={[
+                        "rougeurs persistantes",
+                        "boutons",
+                        "télangiectasies (petits vaisseaux apparents)",
+                        "sensation de brûlure",
+                    ]}
+                />
+                <CardList
+                    title="Phymateuse (ou hyperplasie sébacée)"
+                    descriptions={[
+                        "épaississement de la peau",
+                        "boutons",
+                        "dilatation des pores",
+                        "peau rugueuse",
+                        "rougeurs permanentes au nez, aux joues, au menton, au front et aux paupières",
+                    ]}
+                />
+                <CardList
+                    title="Oculaire"
+                    descriptions={[
+                        "chez 50% des gens atteints de la rosacée",
+                        "larmoiement et/ou sécheresse",
+                        "sensation de corps étrangers dans l'oeil et de brûlure",
+                        "sensibilité à la lumière et vision embrouillée",
+                        "vaisseaux apparents dans les yeux",
+                    ]}
+                />
+                <CardList
+                    title="Granulomateuse"
+                    descriptions={[
+                        "variante rare",
+                        "boutons durs jaunes, bruns et rouges",
+                        "lésions au niveau des paupières",
+                        "pas nécessairement d’autres signes de rosacée",
+                    ]}
+                />
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        Comment peut-on prévenir la rosacée?
+                    </h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            Comme les gens atteints de la rosacée sont
+                            prédisposés à l’avoir, on ne peut pas nécessairement
+                            la prévenir. Ce qu’on peut faire par contre c’est de
+                            la prévention de symptômes, pour ne pas qu’elle soit
+                            trop apparente et pour que son développement soit
+                            lent.
+                        </span>
+                        <span class="block"
+                            >Il est conseillé d’éviter les facteurs qui la
+                            favorisent, tout ce qui va augmenter la température
+                            corporelle et irriter la peau, et d’utiliser des
+                            produits qui vont renforcer la paroi vasculaire et
+                            la peau, ainsi que les protéger.
+                        </span>
+                    </p>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={rosacee}
+                                alt="rosacée"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <GradientSection
+            title="Vous souffrez de la rosacée?"
+            description="La Clinique Idyllium vous propose différents traitements contre la rosacée. Réservez une consultation gratuite avec nos spécialistes pour vous trouver un plan de traitement efficace adapté à votre peau."
+            buttonText="Réservez une consultation"
+            href="#"
+        />
+
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <h1 class="text-center uppercase my-5">
+                Qu'offrons-nous pour traiter la rosacée?
+            </h1>
+            <h2 class="uppercase text-center">Nos solutions</h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+            >
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={laserIcon}
+                            alt=""
+                            title="IPL Thérapie au laser Icon®"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Rajeunissement et correction des imperfections de la
+                        peau
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

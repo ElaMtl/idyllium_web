@@ -1,0 +1,136 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import analyseBG from "@/images/analyse-bg.webp";
+import skintel from "@/images/skintel.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import GradientSection from "@/components/GradientSection.astro";
+import PageBackground from "@/components/PageBackground.astro";
+import analyse_peau from "@/images/analyse_peau.webp";
+---
+
+<Layout
+    language="fr"
+    title="Analyse de la peau | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/traitement/analyse-de-la-peau"
+    alternateHref="/en/treatment/skin-analysis"
+>
+    <main>
+        <PageBackground
+            src={analyseBG.src}
+            section="Traitement"
+            title="Analyse de la peau"
+        />
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <p class="p-5 text-center !leading-10 text-muted-foreground">
+                À la Clinique Idyllium, nous proposons le lecteur de mélanine
+                Skintel® Melanin Reader™, approuvé par la FDA, pour vous aider
+                à organiser des traitements pour vous ! Le lecteur de mélanine
+                Skintel® communique avec l'appareil Icon, fournissant des
+                recommandations de réglage de traitement basées sur la lecture
+                de la mélanine et la pièce à main. Il rend le traitement plus
+                sûr en indiquant au praticien les bons paramètres pour votre
+                type de peau, ce qui réduit considérablement le risque d'effets
+                secondaires.
+            </p>
+        </div>
+        <GradientSection
+            title="Consultation personnalisée"
+            description="La Clinique Idyllium vous propose des moyens innovants de se sentir en sécurité lorsque vous recevez vos traitements esthétiques. Avoir des méthodes spécialement conçues pour vous peut respirer plus facilement en sachant que vous obtiendrez le traitement compatible avec votre peau! Nous ferons tout notre possible pour comprendre vos besoins spécifiques et vous proposer uniquement les solutions les plus efficaces à votre arrivée. Réservez votre rendez-vous pour une consultation personnalisée."
+            buttonText="Réservez une consultation"
+            href="#"
+        />
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={skintel}
+                                alt="skintel"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        À quoi répond Skintel® Melanin Reader™?
+                    </h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            Des millions de procédures esthétiques au laser et à
+                            la lumière sont effectuées chaque année dans le
+                            monde dans des cabinets médicaux, des cliniques, des
+                            spas, des salons et des maisons. Le lecteur est
+                            destiné à aider votre spécialiste à mieux vous
+                            servir et à atteindre vos objectifs esthétiques. Il
+                            permet à votre fournisseur de choisir des
+                            traitements en fonction des besoins de votre peau.
+                        </span>
+                        <span class="block"
+                            >De cette façon, vous êtes rassuré de savoir que le
+                            traitement que vous désirez conviendra
+                            spécifiquement à votre peau et à vos besoins en
+                            matière de soins de la peau.
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        À quoi puis-je m'attendre?
+                    </h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            Skintel® Melanin Reader™ propose des traitements
+                            adaptés à chaque type de peau. Ce système permettra
+                            à votre spécialiste de mieux vous aider avec une
+                            variété de problèmes cutanés et esthétiques tels que
+                            :
+                        </span>
+                    </p>
+                    <ul
+                        class="list-disc list-inside text-xl text-muted-foreground"
+                    >
+                        <li>
+                            Rides du visage, rides périorbitaires des yeux,
+                            rides périorales de la bouche
+                        </li>
+                        <li>Rosacée, vaisseaux sanguins brisés</li>
+                        <li>Tâches brunes, Mélasma</li>
+                        <li>Vergetures</li>
+                        <li>Cicatrices d'acné</li>
+                        <li>Cicatrices chirurgicales</li>
+                        <li>
+                            Dommages causés par le soleil, teint et texture de
+                            la peau
+                        </li>
+                        <li>Épilation – Visage & Corps</li>
+                    </ul>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <Image
+                                class="relative object-contain"
+                                src={analyse_peau}
+                                alt="analyse_peau"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

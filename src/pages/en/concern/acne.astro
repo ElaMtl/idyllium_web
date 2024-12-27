@@ -1,0 +1,288 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import acneBG from "@/images/acne-bg.webp";
+import acne from "@/images/acne.jpg";
+import laver from "@/images/laver.jpeg";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import Card from "@/components/Card.astro";
+import { Accordion } from "@/components/Accordion";
+import GradientSection from "@/components/GradientSection.astro";
+import ImageCard from "@/components/ImageCard.astro";
+import peeling from "@/images/peeling_chimique.webp";
+import soinsFaciaux from "@/images/soins-faciaux.webp";
+import belaMD from "@/images/bela-md.webp";
+import laser from "@/images/laser.webp";
+import Diamond from "@/components/Diamond.astro";
+
+const data = [
+    {
+        title: "Skin Hygiene",
+        description: [
+            "Gently clean the skin 1 to 2 times a day, especially affected areas, with a gentle, unscented soap or cleanser.",
+            "Protect yourself from the sun as UV rays can worsen acne.",
+            "Do not touch, scratch, squeeze, or pop blackheads, papules, and pustules. Let them dry and heal on their own.",
+        ],
+    },
+    {
+        title: "Body Hygiene",
+        description: [
+            "Shower after strenuous physical activity, as the sweat-sebum mix can trap bacteria in the skin’s pores.",
+            "Wash oily hair frequently.",
+            "Wear loose-fitting clothes to prevent friction and sweat from irritating the skin.",
+        ],
+    },
+    {
+        title: "Makeup",
+        description: [
+            "Avoid thick foundations and oil-based cosmetic products.",
+            "Remove makeup before going to bed.",
+            "Discard expired beauty products.",
+            "Clean cosmetic applicators regularly.",
+        ],
+    },
+    {
+        title: "Shaving",
+        description: [
+            "Shave only when necessary.",
+            "Use a razor that minimizes skin irritation.",
+            "Change razor blades frequently to avoid bacteria.",
+            "Avoid aftershave lotions containing alcohol.",
+        ],
+    },
+    {
+        title: "Other",
+        description: [
+            "Maintain good nutrition.",
+            "Have a proper sleep cycle.",
+            "Be mindful of things that come into prolonged contact with the skin.",
+            "Avoid exposing the skin to pollutants.",
+        ],
+    },
+];
+---
+
+<Layout
+    language="en"
+    title="Our Clinic | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Botox Filler Injections | Vaudreuil-Dorion"
+    keywords="Clinic, Idyllium, medical aesthetics, rejuvenation, skin firming"
+    currentHref="en/concern/acne"
+    alternateHref="/preoccupation/acne"
+>
+    <main>
+        <div class="relative">
+            <Image
+                class="absolute aspect-video top-0 left-0 z-[-101] object-cover w-full"
+                src={acneBG}
+                alt="clinic"
+                loading="eager"
+            />
+            <div
+                class="absolute inset-0 w-full h-full bg-black opacity-55 z-[-100]"
+            >
+            </div>
+            <div
+                class="relative pt-[56.25%] flex justify-center lg:justify-start text-white"
+            >
+                <div class="absolute right-0 bottom-0 lg:bottom-80 px-20">
+                    <div class="flex items-center justify-center">
+                        <Diamond />
+                        <div class="w-full flex flex-col items-center">
+                            <h1
+                                class="text-sm md:text-lg lg:text-xl pt-2 font-raleway font-thin uppercase lg:tracking-wider"
+                            >
+                                Concern
+                                <span
+                                    class="block text-2xl md:text-4xl lg:text-5xl uppercase lg:tracking-wider"
+                                >
+                                    Acne
+                                </span>
+                            </h1>
+                            <div
+                                class="hidden lg:block w-[110%] h-[1px] bg-white mt-4"
+                            >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full">
+                <div class="flex flex-row justify-center order-1 md:order-1">
+                    <Image
+                        class="object-contain p-3"
+                        src={acne}
+                        alt="skin analysis"
+                    />
+                </div>
+
+                <div
+                    class="flex flex-col justify-center order-1 md:order-none p-3"
+                >
+                    <h2 class="uppercase font-black py-5">
+                        What is acne and what can cause it?
+                    </h2>
+                    <p>
+                        <span
+                            >Acne is an inflammatory skin condition that occurs
+                            mainly on the face, neck, back, chest, shoulders,
+                            and sometimes even the upper arms.
+                        </span>
+                        <span class="block"
+                            >Sebaceous glands play the main role in acne.</span
+                        >
+                        <span class="block"
+                            >These glands are small structures within each hair
+                            follicle that produce sebum, an oily substance that
+                            lubricates the hair as it grows.</span
+                        >
+                    </p>
+                </div>
+            </div>
+            <CustomSeparator />
+
+            <h2 class="uppercase font-black py-5 text-center">
+                There are several types of acne
+            </h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-28 text-white text-center"
+            >
+                <Card
+                    title="Juvenile Acne"
+                    description="This is the most common type, affecting about 90% of teenagers. It usually evolves over a period of three to five years and appears between the ages of thirteen and twenty-five before gradually disappearing."
+                />
+                <Card
+                    title="Comedonal Acne"
+                    description="It is characterized by a high presence of blackheads and milium grains."
+                />
+                <Card
+                    title="Papulopustular Acne"
+                    description="In addition to blackheads and milium grains, papules and pustules also appear on the skin, which are red bumps and pus-filled pimples."
+                />
+                <Card
+                    title="Tuberculous or Nodular Acne"
+                    description="In addition to all the features of papulopustular acne, this type is accompanied by large, painful inflammatory nodules, deep bumps under the skin."
+                />
+                <Card
+                    title="Occupational Acne"
+                    description="This type is related to one's profession and can be caused by handling certain substances, constant sitting, or lack of hygiene."
+                />
+                <Card
+                    title="Medication-Induced Acne"
+                    description="It is triggered by the intake of certain medications or their application on the skin."
+                />
+                <Card
+                    title="Cosmetic Acne"
+                    description="This type of acne is caused by the application of cosmetic products on the skin. It is often associated with clogged pores and a large presence of blackheads."
+                />
+                <Card
+                    title="Rosacea Acne"
+                    description="When a person has rosacea, they have facial redness often accompanied by papules and pustules."
+                />
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        How can we prevent acne?
+                    </h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            It is not always possible to prevent acne as it can
+                            be genetically determined or caused by oily skin,
+                            but it is possible to reduce its effects.
+                        </span>
+                    </p>
+                    <h3 class="uppercase font-black py-5">
+                        Here are some factors to consider:
+                    </h3>
+                    <div class="relative">
+                        <Accordion client:load data={data} />
+                    </div>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={laver}
+                                alt="washing skin"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <GradientSection
+            title="Suffering from acne?"
+            description="Clinique Idyllium offers various acne treatments. Book a free consultation with our specialists to find an effective treatment plan suited to your skin."
+            buttonText="Book a consultation"
+            href="#"
+        />
+
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <h1 class="text-center uppercase my-5">
+                What do we offer to treat acne?
+            </h1>
+            <h2 class="uppercase text-center">Our Solutions</h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+            >
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={soinsFaciaux}
+                            alt=""
+                            title="Facial Treatments"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Plump, smooth, and perfectly hydrate your skin
+                    </p>
+                </div>
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={peeling}
+                            alt=""
+                            title="Chemical Peeling"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Improve the appearance of your skin
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard src={belaMD} alt="" title="Bela MD" />
+                    </a>
+                    <p class="text-muted-foreground">
+                        For clear, refreshed, and radiant skin
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={laser}
+                            alt=""
+                            title="IPL Icon® Laser Therapy"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Rejuvenation and correction of skin imperfections
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

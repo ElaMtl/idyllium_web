@@ -1,0 +1,254 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import acneBG from "@/images/acne-bg.webp";
+import acne from "@/images/acne.jpg";
+import laver from "@/images/laver.jpeg";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import Card from "@/components/Card.astro";
+import { Accordion } from "@/components/Accordion";
+import GradientSection from "@/components/GradientSection.astro";
+import ImageCard from "@/components/ImageCard.astro";
+import peeling from "@/images/peeling_chimique.webp";
+import soinsFaciaux from "@/images/soins-faciaux.webp";
+import belaMD from "@/images/bela-md.webp";
+import laser from "@/images/laser.webp";
+import PageBackground from "@/components/PageBackground.astro";
+
+const data = [
+    {
+        title: "Hygiène de la peau",
+        description: [
+            "Nettoyer la peau  délicatement 1 à 2 fois par jour, surtout les régions atteintes, avec un savon ou un nettoyant doux et non parfumé.",
+            "Se protéger du soleil car les rayons UV peuvent aggraver l’acné.",
+            "Ne pas toucher, gratter, pincer ou percer les boutons noirs, papules et pustules, les laisser sécher et guérir par eux mêmes.",
+        ],
+    },
+    {
+        title: "Hygiène du corps",
+        description: [
+            "Prendre une douche après avoir fait un gros effort physique, car le mélange sueur-sébum peut contribuer à piéger les bactéries dans les pores de la peau",
+            "Laver souvent les cheveux gras",
+            "Porter des vêtements amples pour éviter que le frottement et la sueur irritent la peau",
+        ],
+    },
+    {
+        title: "Maquillage",
+        description: [
+            "Éviter les fonds de teint épais et les produits cosmétiques à base d’huile",
+            "Se démaquiller avant de se coucher",
+            "Jeter les produits de beauté périmés",
+            "Nettoyer régulièrement les applicateurs cosmétiques",
+        ],
+    },
+    {
+        title: "Rasage",
+        description: [
+            "Se raser seulement quand nécessaire",
+            "Utiliser un rasoir qui irrite le moins la peau",
+            "Changer souvent les lames d’un rasoir à main pour éviter les bactéries",
+            "Ne pas utiliser de lotion après rasage contenant de l’alcool",
+        ],
+    },
+    {
+        title: "Autres",
+        description: [
+            "Avoir une bonne nutrition",
+            "Avoir un bon cycle de sommeil",
+            "Faire attention à ce qui est en contact prolongé avec la peau",
+            "Éviter d’exposer la peau aux polluants",
+        ],
+    },
+];
+---
+
+<Layout
+    language="fr"
+    title="Acné | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/preoccupation/acne"
+    alternateHref="/en/concern/acne"
+>
+    <main>
+        <PageBackground src={acneBG.src} section="Préoccupation" title="Acné" />
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full">
+                <div class="flex flex-row justify-center order-1 md:order-1">
+                    <Image class="object-contain p-3" src={acne} alt="acne" />
+                </div>
+
+                <div
+                    class="flex flex-col justify-center order-1 md:order-none p-3"
+                >
+                    <h2 class="uppercase font-black py-5">
+                        L’acné, qu’est-ce que c’est et qu’est-ce qui peut la
+                        causer?
+                    </h2>
+                    <p class="text-muted-foreground">
+                        <span
+                            >L’acné est une maladie inflammatoire de la peau qui
+                            survient principalement sur le visage, le cou, le
+                            dos, la poitrine, les épaules et parfois même le
+                            haut des bras.
+                        </span>
+                        <span class="block"
+                            >C’est les glandes sébacées qui y jouent le rôle
+                            principal.</span
+                        >
+                        <span class="block"
+                            >Les glandes sébacées sont de petites glandes
+                            présentes dans le follicule de chacun de nos poils
+                            qui produisent du sébum, c'est-à-dire du “gras” pour
+                            lubrifier le poil quand il pousse.</span
+                        >
+                    </p>
+                </div>
+            </div>
+            <CustomSeparator />
+
+            <h2 class="uppercase font-black py-5 text-center">
+                Il existe plusieurs types d’acné
+            </h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-28 text-white text-center"
+            >
+                <Card
+                    title="Acné juvénile"
+                    description="c’est le type le plus répandu, elle touche environ 90% des adolescents et elle évolue habituellement sur une période de trois à cinq ans. Elle se manifeste entre treize et vingt-cinq ans pour s’atténuer et disparaître par la suite."
+                />
+                <Card
+                    title="Acné comédonienne"
+                    description="elle se caractérise par une forte présence de points noirs et de grains de milium."
+                />
+                <Card
+                    title="Acné papulo-pustuleuse"
+                    description="dans ce type, en plus des points noirs et des grains de milium, il y a aussi présence de papules et de pustules sur la peau, c’est-à-dire des boutons rouges et des boutons avec du pus."
+                />
+                <Card
+                    title="Acné tubéreuse ou indurée"
+                    description="en plus de toutes les caractéristiques de l’acné papulo-pustuleuse, celle-ci s’accompagne aussi de nodules inflammatoires volumineux, donc des gros boutons profonds et douloureux."
+                />
+                <Card
+                    title="Acné professionnelle"
+                    description="ce type est relié à la profession, cela peut être causé par la manipulation de certaines substances, une position assise constante ou un manque d’hygiène."
+                />
+                <Card
+                    title="Acné médicamenteuse"
+                    description="elle est déclenchée par la prise de certains médicaments ou par l’application de ceux-ci sur la peau."
+                />
+                <Card
+                    title="Acné cosmétique"
+                    description="c’est à cause de l’application de produits cosmétiques sur la peau que l’on voit apparaître ce type d’acnée. Souvent elle est associée à une peau asphyxiée et il y a présence de nombreux points noirs."
+                />
+                <Card
+                    title="Acné rosacée"
+                    description="lorsqu’une personne est atteinte de rosacée, elle a des rougeurs au visage qui souvent s’accompagnent de papules et de pustules."
+                />
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        Comment peut-on prévenir l’acné?
+                    </h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            Il n’est pas toujours possible de prévenir l’acné,
+                            car c’est une condition qui peut être génétiquement
+                            déterminée ou causée par un type de peau lipidique
+                            (gras), mais il est possible de l’atténuer.
+                        </span>
+                    </p>
+                    <h3 class="uppercase font-black py-5">
+                        Voici quelques aspects à considérer:
+                    </h3>
+                    <div class="relative">
+                        <Accordion client:load data={data} />
+                    </div>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={laver}
+                                alt="laver la peau"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <GradientSection
+            title="Vous souffrez d'acné?"
+            description="La Clinique Idyllium vous propose différents traitements contre l'acné. Réservez une consultation gratuite avec nos spécialistes pour vous trouver un plan de traitement efficace adapté à votre peau."
+            buttonText="Réservez une consultation"
+            href="#"
+        />
+
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <h1 class="text-center uppercase my-5">
+                Qu'offrons nous pour traiter l'acné?
+            </h1>
+            <h2 class="uppercase text-center">Nos solutions</h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+            >
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={soinsFaciaux}
+                            alt=""
+                            title="Soins Faciaux"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Repulpéz, lisséz et parfaitement hydratéz votre peau
+                    </p>
+                </div>
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={peeling}
+                            alt=""
+                            title="Peeling chimique"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Améliorez l’apparence de votre peau
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard src={belaMD} alt="" title="Bela MD" />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Pour une peau clarifiée, rafraîchie et lumineuse
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={laser}
+                            alt=""
+                            title="IPL Thérapie au laser Icon®"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Rajeunissement et correction des imperfections de la
+                        peau
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

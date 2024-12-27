@@ -1,0 +1,167 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import tachesPigmentairesBG from "@/images/taches-pigmentaires-bg.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import Card from "@/components/Card.astro";
+import GradientSection from "@/components/GradientSection.astro";
+import ImageCard from "@/components/ImageCard.astro";
+import peeling from "@/images/peeling_chimique.webp";
+import belaMD from "@/images/bela-md.webp";
+import tachesPigmentaires from "@/images/taches-pigmentaires.webp";
+import laserIcon from "@/images/laser.webp";
+import PageBackground from "@/components/PageBackground.astro";
+---
+
+<Layout
+    language="fr"
+    title="Tâches Pigmentaires | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/preoccupation/taches-pigmentaires"
+    alternateHref="/en/concern/pigmentatarry-stains"
+>
+    <main>
+        <PageBackground
+            src={tachesPigmentairesBG.src}
+            section="Préoccupation"
+            title="Tâches Pigmentaires"
+        />
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <div class="text-center p-5 md:p-8 lg:p-12 max-w-9xl container">
+                <h2 class="uppercase font-black py-5">
+                    Les taches pigmentaires, qu’est-ce que c’est?
+                </h2>
+                <p class="text-muted-foreground">
+                    <span
+                        >Les taches pigmentaires sont une anomalie qui modifie
+                        la couleur de la peau par le biais de mélanocytes.
+                        Celles-ci sont des cellules localisées dans la peau,
+                        responsables de sa pigmentation (coloration) par la
+                        sécrétion de mélanine.
+                    </span>
+                    <span class="block"
+                        >On appelle tache pigmentaire une modification de la
+                        couleur normale de la peau. Une tache peut être
+                        hyperpigmentée (brune) ou hypopigmentée (blanche).
+                    </span>
+                    <span class="block"
+                        >Comme la plupart du temps en cosmétologie on réfère à
+                        l’hyperpigmentation lorsqu’il est sujet de taches
+                        pigmentaires, c’est de celles-ci que nous allons
+                        discuter.
+                    </span>
+                </p>
+            </div>
+
+            <CustomSeparator />
+
+            <h2 class="uppercase font-black py-5 text-center">
+                Qu’est-ce qui peut causer les taches pigmentaires?
+            </h2>
+            <div
+                class="grid grid-cols-1 lg:grid-cols-3 gap-12 py-28 text-white text-center"
+            >
+                <Card
+                    title="Le lentigo solaire"
+                    description="c’est des taches rondes de couleur brun clair qui apparaissent suite à des expositions solaires répétées avec l’âge. On les appelle aussi taches de soleil ou taches de vieillesse. Elles sont présentes sur les surfaces de la peau les plus exposées au soleil, donc la plupart du temps le visage, les mains et le décolleté."
+                />
+                <Card
+                    title="Le chloasma"
+                    description="les taches pigmentaires causées par un changement hormonal. Ces taches sont dues à un excès de fabrication de mélanine associé à des dérèglements hormonaux. Le chloasma est le plus souvent localisé au niveau des joues, du front et au-dessus des lèvres."
+                />
+                <Card
+                    title="L’hyperpigmentation post inflammatoire"
+                    description="c’est quand le corps produit plus de mélanine suite à une blessure, c’est un mécanisme de défense naturel. Une exposition au soleil lors de la cicatrisation amène une pigmentation. Des cicatrices pigmentaires peuvent aussi apparaître en cas d’acné ou de piqûre d’insecte. Il s’agit de taches qui persistent après la disparition du bouton si celui-ci n’a pas été bien traité."
+                />
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        Comment peut-on prévenir les taches pigmentaires?
+                    </h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            La façon de prévenir les taches pigmentaires c’est
+                            de se protéger des rayons UV. L’exposition au soleil
+                            prolongée et fréquente est à éviter. Il faut aussi
+                            protéger notre peau du soleil le plus possible!
+                            L’utilisation d’une crème solaire, d’un filtre
+                            solaire ou d’un écran solaire quotidienne est très
+                            essentielle pour combattre l’apparition des taches
+                            pigmentaires.
+                        </span>
+                    </p>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={tachesPigmentaires}
+                                alt="taches pigmentaires"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <GradientSection
+            title="Vous souffrez de taches pigmentaires?"
+            description="La Clinique Idyllium vous propose différents traitements contre taches pigmentaires. Réservez une consultation gratuite avec nos spécialistes pour vous trouver un plan de traitement efficace adapté à votre peau."
+            buttonText="Réservez une consultation"
+            href="#"
+        />
+
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <h1 class="text-center uppercase my-5">
+                Qu'offrons-nous pour traiter les taches pigmentaires?
+            </h1>
+            <h2 class="uppercase text-center">Nos solutions</h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+            >
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={peeling}
+                            alt=""
+                            title="Peeling chimique"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Améliorez l’apparence de votre peau
+                    </p>
+                </div>
+                <div>
+                    <a href="#">
+                        <ImageCard src={belaMD} alt="" title="Bela MD" />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Pour une peau clarifiée, rafraîchie et lumineuse
+                    </p>
+                </div>
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={laserIcon}
+                            alt=""
+                            title="IPL Thérapie au laser Icon®"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Rajeunissement et correction des imperfections de la
+                        peau
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

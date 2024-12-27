@@ -1,0 +1,205 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import Button from "@/components/Button.astro";
+import PageBackground2 from "@/components/PageBackground2.astro";
+import ImageCardPromo from "@/components/ImageCardPromo.astro";
+
+import traitements from "@/images/traitements.webp";
+import laserIcon from "@/images/laser.webp";
+import toxine from "@/images/toxine-botulinique.webp";
+import agents from "@/images/agents-comblement.webp";
+import belaMD from "@/images/bela-md.webp";
+import endermologie from "@/images/endermologie.webp";
+import epilation2 from "@/images/epilation2.webp";
+import lipomassage from "@/images/lipomassage.webp";
+import raffermissementFlexsure from "@/images/raffermissement-flexsure.webp";
+import raffermissementTempsure from "@/images/raffermissement-tempsure.webp";
+import promotions from "@/images/promotions.jpg";
+
+import pigmentation from "@/images/imgpromo/Pigmentation.jpg";
+import hollywood from "@/images/imgpromo/hollywood.webp";
+import zwave from "@/images/imgpromo/Zwave.jpg";
+import massage90 from "@/images/imgpromo/Massage.jpg";
+import intime from "@/images/imgpromo/intime.jpg";
+import tattoo from "@/images/imgpromo/tattoo.jpg";
+import termodas from "@/images/imgpromo/termodas.png";
+import photorej from "@/images/imgpromo/photorej.jpg";
+import lpgnew from "@/images/imgpromo/lpgnew.jpg";
+import epilationman from "@/images/imgpromo/epolationman.jpeg";
+import peelchim from "@/images/imgpromo/peelchim.webp";
+---
+
+<Layout
+    language="fr"
+    title="Promotions | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/promotions"
+    alternateHref="/en/promotions"
+>
+    <main>
+        <PageBackground2
+            src={traitements.src}
+            section="Promotions"
+            title="Clinique médico-esthétique de rajeunissement et raffermissement cutané"
+        />
+
+        <h1 class="text-center uppercase my-5">NOS PROMOTIONS</h1>
+
+        <div
+            class="grid container grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+        >
+            {
+                [
+                    {
+                        src: pigmentation,
+                        title: "Traitement de la pigmentation",
+                        description:
+                            "50 % de rabais pour chaque 3e traitement du programme (Microneedling - Microdermabrasion - Photorajeunissement - IPL et laser Peeling chimique)",
+                        details: "*Assistance financière disponible",
+                        date: "31 décembre 2024.",
+                    },
+                    {
+                        src: hollywood,
+                        title: "PEELING HOLLYWOOD",
+                        description:
+                            "Brillez à Noël avec notre soin signature laser carbone peel du visage + décolleté pour 280 $",
+                        details:
+                            "*Options de traitement : LPG, ZWave, Myostimulation, Radiofréquence, Cavitation.",
+                        date: "31 décembre 2024.",
+                    },
+                    {
+                        src: zwave,
+                        title: "REMODELAGE CORPOREL",
+                        description:
+                            "50 % de rabais pour chaque 2e et 3e étape du traitement + 25 % de rabais pour la 1e étape pour une zone supplémentaire. Options de traitement : LPG, ZWave, Myostimulation, Radiofréquence, Cavitation, Peeling.",
+                        details:
+                            "*Assistance financière disponible et reçus d’assurance en massothéreapie.",
+                        date: "31 décembre 2024.",
+                    },
+                    {
+                        src: epilation2,
+                        title: "L'ÉPILATION AU LASER",
+                        description:
+                            "Achetez vos soins préfères avec la promotion jusqu'à 50% de réduction sur les",
+                        details:
+                            "*Nouveaux client: Certains traitements nécessitent une consultation avant le traitement.",
+                        date: "31 décembre 2024.",
+                    },
+                    {
+                        src: peelchim,
+                        title: "Les jeudis - Journée Peeling",
+                        description: "Rabais 14%",
+                        details:
+                            "*Peeling chimique AZELAC, FERULAC, TCA, rétinol",
+                        date: "Les jeudis",
+                    },
+                    {
+                        src: intime,
+                        title: "RAJEUNISSEMENT INTIME",
+                        description:
+                            "Thérapie vaginale au laser. Offre à 2500 $ +tx/ 3 séances",
+                        details:
+                            "*Contre l’incontinence, la sécheresse, le prolapsus des organes,la perte de sensibilité, etc.",
+                        date: "31 décembre 2024.",
+                    },
+                    {
+                        src: tattoo,
+                        title: "DÉTATOUAGE AU LASER ",
+                        description:
+                            "Nous vous introduisons notre nouveau traitement!",
+                        details: "1 pouce : 100$ ",
+                        date: "31 décembre 2024.",
+                    },
+                    {
+                        src: belaMD,
+                        title: "FACIAL CLASSIQUE, BELA MD",
+                        description: "Achetez-en 3, obtenez le 4e gratuit.",
+                        date: "31 décembre 2024.",
+                    },
+                    {
+                        src: massage90,
+                        title: "MASSAGE THÉRAPEUTIQUE 90 MIN",
+                        description:
+                            "135 $ + tx/séance. Incluant sauna infrarouge et aromathérapie",
+                        details: "*Reçus d’assurance en massothéreapie.",
+                        date: "31 décembre 2024.",
+                    },
+                    {
+                        src: termodas,
+                        title: "TERMA D.A.S - UNE TECHNOLOGIE UNIQUE",
+                        description:
+                            "Vous avez besoin d’une procédure pour améliorer les résultats. Bajoues, double menton, lifting moyen / inférieur",
+                        details: "*20% de réduction ",
+                        date: "31 décembre 2024.",
+                    },
+                    {
+                        src: photorej,
+                        title: "PHOTORAJEUNISSEMENT",
+                        description: "IPL, Fotona, Laser Co2",
+                        details: "*15% de réduction",
+                        date: "31 décembre 2024.",
+                    },
+                    {
+                        src: lpgnew,
+                        title: "NOUVEL APPAREIL L.P.G",
+                        description:
+                            "1 procédure égale à 3 procédures avec l’appareil précédent.",
+                        details: "*25% de réduction pour 10 séances",
+                        date: "31 décembre 2024.",
+                    },
+                    {
+                        src: raffermissementTempsure,
+                        title: "BOOSTER VOTRE COLLAGÈNE",
+                        description:
+                            "Lisser, raffermir et tonifier la peau et améliorer l’apparence des cicatrices et des rides.",
+                        details:
+                            "*Achetez 3 séances de Microneedling + 3 peelings et recevez la 4e séance de chaque GRATUITE !",
+                        date: "31 décembre 2024.",
+                    },
+                    {
+                        src: agents,
+                        title: "AGENT DE COMBLEMENT",
+                        description: "30% de rabais sur le 2e seringue",
+                        details: "*Promotion à ne pas manquer !",
+                        date: "31 décembre 2024.",
+                    },
+                    {
+                        src: epilationman,
+                        title: "Joyeux anniversaire !",
+                        description: "Épilation des aisselles — un cadeau !  ",
+                        details:
+                            "*Conditions : l'offre est valable pendant le mois de votre anniversaire. Ne manquez pas cette chance !",
+                        date: "le mois de votre anniversaire.",
+                    },
+                ].map((item) => (
+                    <div>
+                        <a href="#">
+                            <div class="h-60 w-full overflow-hidden flex items-center">
+                                <ImageCardPromo
+                                    src={item.src}
+                                    alt=""
+                                    title={item.title}
+                                    className="h-full w-full object-cover object-center rounded-md"
+                                />
+                            </div>
+                        </a>
+                        <p class="text-muted-foreground">{item.description}</p>
+                        <p class="text-muted-foreground text-base smalltext">
+                            {item.details}
+                            <p class="text-muted-foreground text-sm smalltext">
+                                Sur présentation de ce coupon. Ne peut être
+                                jumelé. 1 coupon par client, par facture. Valide
+                                jusqu’au {item.date}
+                            </p>
+                        </p>
+                    </div>
+                ))
+            }
+        </div>
+    </main>
+</Layout>

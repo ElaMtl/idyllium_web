@@ -1,0 +1,232 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import relachementCutaneBG from "@/images/relachement-cutane-bg.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import Card from "@/components/Card.astro";
+import GradientSection from "@/components/GradientSection.astro";
+import ImageCard from "@/components/ImageCard.astro";
+import endermologie from "@/images/endermologie.webp";
+import relachementCutane from "@/images/relachement-cutane.webp";
+import laserIcon from "@/images/laser.webp";
+import toxine from "@/images/toxine-botulinique.webp";
+import agents from "@/images/agents-comblement.webp";
+import belaMD from "@/images/bela-md.webp";
+import lipomassage from "@/images/lipomassage.webp";
+import raffermissementFlexsure from "@/images/raffermissement-flexsure.webp";
+import raffermissementTempsure from "@/images/raffermissement-tempsure.webp";
+import PageBackground from "@/components/PageBackground.astro";
+---
+
+<Layout
+    language="fr"
+    title="Relâchement cutané | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/preoccupation/relachement-cutane"
+    alternateHref="/en/concern/skin-sagging"
+>
+    <main>
+        <PageBackground
+            src={relachementCutaneBG.src}
+            section="Préoccupation"
+            title="Relâchement cutané"
+        />
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <div class="text-center p-5 md:p-8 lg:p-12 max-w-9xl container">
+                <h2 class="uppercase font-black py-5">
+                    Le relâchement cutané, qu’est-ce que c’est?
+                </h2>
+                <p class="text-muted-foreground">
+                    <span
+                        >Avec l’âge, la peau de chaque individu s’amincit,
+                        s’assèche et perd en élasticité, celle-ci devient molle,
+                        manque de fermeté et peut même présenter un aspect fripé
+                        ou flasque. Ce phénomène s’appelle le relâchement
+                        cutané.
+                    </span>
+                </p>
+            </div>
+
+            <CustomSeparator />
+
+            <h2 class="uppercase font-black py-5 text-center">
+                Qu’est-ce qui peut causer le relâchement cutané?
+            </h2>
+            <div
+                class="grid grid-cols-1 lg:grid-cols-3 gap-12 py-28 text-white text-center"
+            >
+                <Card
+                    title=""
+                    description="La laxité cutanée est causée par de nombreux facteurs, on les divise en facteurs internes, donc causés par notre organisme, et en facteurs externes, donc tout ce qui est causé par notre style de vie et notre environnement."
+                />
+                <Card
+                    title=""
+                    description="En vieillissant notre peau subit une diminution du collagène, de fibres élastiques et d’acide hyaluronique, ainsi qu’un ralentissement de circulation sanguine et des changements hormonaux, ce sont les facteurs internes du relâchement cutané."
+                />
+                <Card
+                    title=""
+                    description="Les facteurs externes auxquels nous sommes exposés au cours de notre vie sont l’exposition au soleil, le tabagisme et l’alcool, une mauvaise alimentation, une perte de poids importante et la grossesse."
+                />
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        Comment peut-on prévenir le relâchement cutané?
+                    </h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            En général, les zones du corps les plus concernées
+                            par le relâchement cutané sont le visage, les bras,
+                            le bas-ventre, les seins, les fesses et l’intérieur
+                            des cuisses.
+                        </span>
+                        <span class="block"
+                            >Ce phénomène est souvent la cause de nombreuses
+                            insécurités chez beaucoup de personnes. C’est
+                            pourquoi il existe des traitements de
+                            raffermissement cutané. Ces procédures provoquent
+                            une stimulation des fibres élastiques et du
+                            collagène. Ce qui a pour conséquence un
+                            raffermissement et un rajeunissement des tissus de
+                            la peau.
+                        </span>
+                    </p>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={relachementCutane}
+                                alt="relachement cutane"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <GradientSection
+            title="Vous souffrez du relâchement cutané?"
+            description="La Clinique Idyllium vous propose différents traitements contre le relâchement cutané. Réservez une consultation gratuite avec nos spécialistes pour vous trouver un plan de traitement efficace adapté à votre peau."
+            buttonText="Réservez une consultation"
+            href="#"
+        />
+
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <h1 class="text-center uppercase my-5">
+                Qu'offrons-nous pour traiter le relâchement cutané?
+            </h1>
+            <h2 class="uppercase text-center">Nos solutions</h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+            >
+                <div>
+                    <a href="#">
+                        <ImageCard src={belaMD} alt="" title="Bela MD" />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Pour une peau clarifiée, rafraîchie et lumineuse
+                    </p>
+                </div>
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={agents}
+                            alt=""
+                            title="Agents de comblement"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Un “lifting” sans chirurgie
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={toxine}
+                            alt=""
+                            title="Injectables - Toxine Botulinique"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Pour votre apparence détendue, plus sereine et reposée
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={laserIcon}
+                            alt=""
+                            title="IPL Thérapie au laser Icon®"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Rajeunissement et correction des imperfections de la
+                        peau
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={endermologie}
+                            alt=""
+                            title="Endermologie visage"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Raffermissement de la peau et traitement des rides
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={lipomassage}
+                            alt=""
+                            title="Lipomassage endermologie corps"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Sculptez et modelez votre corps à la perfection
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={raffermissementFlexsure}
+                            alt=""
+                            title="Raffermissement de la peau Flexsure"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Remodelage du corps et élimination des graisses
+                    </p>
+                </div>
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={raffermissementTempsure}
+                            alt=""
+                            title="Raffermissement de la peau Tempsure™ Envi"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Lifting du visage et du corps non chirurgical
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

@@ -1,0 +1,259 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import belaMDBG from "@/images/bela-md-bg.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import PageBackground from "@/components/PageBackground.astro";
+import belaMDVideo from "@/videos/bela-md.mp4";
+import c1 from "@/images/1.png";
+import c2 from "@/images/2.png";
+import c3 from "@/images/3.png";
+import c4 from "@/images/4.png";
+import NumberSection from "@/components/NumberSection.astro";
+import ImageCard from "@/components/ImageCard.astro";
+import ridesEtRidulesBG from "@/images/rides-et-ridules-bg.webp";
+import tachesPigmentairesBG from "@/images/taches-pigmentaires-bg.webp";
+import acneBG from "@/images/acne-bg.webp";
+import cicatricesBG from "@/images/cicatrices-bg.webp";
+import relachementCutaneBG from "@/images/relachement-cutane-bg.webp";
+import resultats from "@/images/resultats.jpeg";
+
+const steps = [
+    {
+        src: c1,
+        alt: "Nettoyage en profondeur & infusion de sérum",
+        number: 1,
+        description: "Nettoyage en profondeur & infusion de sérum",
+    },
+    {
+        src: c2,
+        alt: "Tonification des muscles & stimulation de la circulation",
+        number: 2,
+        description: "Tonus des muscles & stimulation de la circulation",
+    },
+    {
+        src: c3,
+        alt: "Eau hydrogénée antioxydante",
+        number: 3,
+        description: "Eau hydrogénée antioxydante",
+    },
+    {
+        src: c4,
+        alt: "Technique avancée d'administration de sérum",
+        number: 4,
+        description: "Technique avancée d'administration de sérum",
+    },
+];
+---
+
+<Layout
+    language="fr"
+    title="Bela MD | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/traitement/bela-md"
+    alternateHref="/en/treatment/bela-md"
+>
+    <main>
+        <PageBackground
+            src={belaMDBG.src}
+            section="Traitement"
+            title="Bela MD"
+            subtitle="Pour une peau clarifiée, rafraîchie et lumineuse"
+        />
+        <div class="p-5 md:p-8 lg:p-12 w-full">
+            <div
+                class="flex flex-col lg:flex-row h-full gap-10 justify-between container"
+            >
+                <div class="flex-1">
+                    <h2 class="uppercase font-bold">
+                        Dernière innovation de microdermabrasion avec infusion
+                        de sérum
+                    </h2>
+                    <p class="!leading-10 text-muted-foreground">
+                        La plate-forme médicale de santé de la peau BelaMD fait
+                        passer les traitements populaires, tels que l'infusion
+                        de sérum et la microdermabrasion au diamant, au niveau
+                        supérieur avec les dernières technologies axées sur les
+                        résultats et les progrès du sérum. Il comprend 5 étapes
+                        conçues pour améliorer l'apparence des ridules, des
+                        rides, des pores congestionnés et dilatés, des peaux
+                        grasses ou sujettes à l'acné, de l'hyperpigmentation et
+                        des taches brunes.
+                    </p>
+                </div>
+                <ul
+                    class="list-disc list-inside text-2xl text-muted-foreground"
+                >
+                    <li>Microdermabrasion au diamant sec</li>
+                    <li>Infusion d’eau hydrogène</li>
+                    <li>Nettoyage et extraction par ultrasons</li>
+                    <li>Stimulation neuromusculaire</li>
+                    <li>Perfusion de sérum BELA MD</li>
+                    <li>Électroporation</li>
+                </ul>
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        Comment cela fonctionne?
+                    </h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            Le traitement Bela MD commence par une
+                            microdermabrasion au diamant, suivie d'une eau
+                            hydrogène, d'une stimulation musculaire, d'une
+                            infusion de sérum et d'une électroporation.
+                        </span>
+                        <span class="block"
+                            >Pendant le traitement, la couche superficielle de
+                            la peau est exfoliée, la peau est profondément
+                            hydratée et infusée d'ingrédients puissants. Le
+                            visage et le cou sont stimulés pour un effet
+                            tonifiant et liftant.
+                        </span>
+                        <span class="block"
+                            >Des sérums de traitement personnalisables sont
+                            utilisés pour cibler les besoins uniques de chaque
+                            patient.
+                        </span>
+                    </p>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <video
+                                class="relative aspect-video object-contain"
+                                controls
+                                src={belaMDVideo}
+                            >
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <NumberSection steps={steps} />
+            <CustomSeparator />
+
+            <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+                <h1 class="text-center uppercase my-5">
+                    Pourquoi choisir Bela MD?
+                </h1>
+                <h2 class="uppercase text-center">
+                    Pour répondre à ces préoccupations
+                </h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+                >
+                    <div>
+                        <a href="#">
+                            <ImageCard
+                                src={ridesEtRidulesBG}
+                                alt=""
+                                title="Rides et ridules"
+                            />
+                        </a>
+                        <p class="text-muted-foreground">
+                            Chacun définit les rides à sa manière
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <ImageCard
+                                src={tachesPigmentairesBG}
+                                alt=""
+                                title="Taches pigmentaires"
+                            />
+                        </a>
+                        <p class="text-muted-foreground">
+                            Les taches pigmentaires sont une anomalie
+                        </p>
+                    </div>
+
+                    <div>
+                        <a href="#">
+                            <ImageCard src={acneBG} alt="" title="Acné" />
+                        </a>
+                        <p class="text-muted-foreground">
+                            L’acné est une maladie inflammatoire de la peau
+                        </p>
+                    </div>
+
+                    <div>
+                        <a href="#">
+                            <ImageCard
+                                src={cicatricesBG}
+                                alt=""
+                                title="Cicatrices"
+                            />
+                        </a>
+                        <p class="text-muted-foreground">
+                            La cicatrisation fait partie du processus de
+                            guérison
+                        </p>
+                    </div>
+
+                    <div>
+                        <a href="#">
+                            <ImageCard
+                                src={relachementCutaneBG}
+                                alt=""
+                                title="Relâchement cutané"
+                            />
+                        </a>
+                        <p class="text-muted-foreground">
+                            Avec l’âge, la peau de chaque individu s’amincit,
+                            s’assèche et perd en élasticité
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">Vos résultats</h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            Après le traitement, la peau a un éclat frais
+                            hydraté qui peut être vu immédiatement. Le
+                            traitement de conditions spécifiques telles que
+                            l'acné, la pigmentation et le teint et la texture
+                            inégaux peut nécessiter 3 à 6 traitements pour des
+                            résultats optimaux. Bela MD est un traitement très
+                            sûr et doux sans temps d'arrêt.
+                        </span>
+                        <span class="block"
+                            >Après le traitement, les patients peuvent ressentir
+                            des rougeurs qui devraient disparaître en quelques
+                            heures. Une protection solaire d'un minimum de SPF
+                            30 est fortement recommandée après le traitement et
+                            pour la semaine suivante.
+                        </span>
+                    </p>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={resultats}
+                                alt="resultats"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

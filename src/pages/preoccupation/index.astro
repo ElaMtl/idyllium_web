@@ -1,0 +1,276 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import acneBG from "@/images/acne-bg.webp";
+import cicatricesBG from "@/images/cicatrices-bg.webp";
+import doubleMentonBG from "@/images/double-menton-bg.webp";
+import pilositeBG from "@/images/pilosite-bg.webp";
+import relachementCutaneBG from "@/images/relachement-cutane-bg.webp";
+import ridesEtRidulesBG from "@/images/rides-et-ridules-bg.webp";
+import rosaceeBG from "@/images/rosacee-bg.webp";
+import tachesPigmentairesBG from "@/images/taches-pigmentaires-bg.webp";
+import teintTerneBG from "@/images/teint-terne-bg.webp";
+import telangiectasiesBG from "@/images/telangiectasies-bg.webp";
+import celluliteBG from "@/images/cellulite-bg.webp";
+import varicesBG from "@/images/varices-bg.webp";
+import vergeturesBG from "@/images/vergetures-bg.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import ImageCard from "@/components/ImageCard.astro";
+import notreClinique from "@/images/notre-clinique.webp";
+import PageBackground from "@/components/PageBackground.astro";
+---
+
+<Layout
+    language="fr"
+    title="Préoccupations | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/preoccupation"
+    alternateHref="/en/concern"
+>
+    <main>
+        <PageBackground
+            src={notreClinique.src}
+            section="Préoccupation"
+            title="Trouvez la solution"
+        />
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <div class="text-center p-5 md:p-8 lg:p-12 max-w-9xl container">
+                <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+                    <h2 id="visage" class="text-4xl">Visage</h2>
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+                    >
+                        <div>
+                            <a href="/preoccupation/acne">
+                                <ImageCard src={acneBG} alt="" title="Acné" />
+                            </a>
+                            <p class="text-muted-foreground">
+                                L’acné est une maladie inflammatoire de la peau
+                            </p>
+                        </div>
+                        <div>
+                            <a href="/preoccupation/cicatrices">
+                                <ImageCard
+                                    src={cicatricesBG}
+                                    alt=""
+                                    title="Cicatrices"
+                                />
+                            </a>
+                            <p class="text-muted-foreground">
+                                La cicatrisation fait partie du processus de
+                                guérison
+                            </p>
+                        </div>
+                        <div>
+                            <a href="/preoccupation/double-menton">
+                                <ImageCard
+                                    src={doubleMentonBG}
+                                    alt=""
+                                    title="Double menton"
+                                />
+                            </a>
+                            <p class="text-muted-foreground">
+                                Un dépôt de graisse, ou une peau relâchée du cou
+                                et du menton
+                            </p>
+                        </div>
+                        <div>
+                            <a href="/preoccupation/pilosite">
+                                <ImageCard
+                                    src={pilositeBG}
+                                    alt=""
+                                    title="Pilosité"
+                                />
+                            </a>
+                            <p class="text-muted-foreground">
+                                Oubliez le rasage, oubliez l'épilation
+                            </p>
+                        </div>
+                        <div>
+                            <a href="/preoccupation/relachement-cutane">
+                                <ImageCard
+                                    src={relachementCutaneBG}
+                                    alt=""
+                                    title="Relâchement cutané"
+                                />
+                            </a>
+                            <p class="text-muted-foreground">
+                                Avec l’âge, la peau de chaque individu
+                                s’amincit, s’assèche et perd en élasticité
+                            </p>
+                        </div>
+                        <div>
+                            <a href="/preoccupation/rides-et-ridules">
+                                <ImageCard
+                                    src={ridesEtRidulesBG}
+                                    alt=""
+                                    title="Rides et ridules"
+                                />
+                            </a>
+                            <p class="text-muted-foreground">
+                                Chacun définit les rides à sa manière
+                            </p>
+                        </div>
+                        <div>
+                            <a href="/preoccupation/rosacee">
+                                <ImageCard
+                                    src={rosaceeBG}
+                                    alt=""
+                                    title="Rosacée"
+                                />
+                            </a>
+                            <p class="text-muted-foreground">
+                                La rosacée est une anomalie de la peau
+                                circulatoire
+                            </p>
+                        </div>
+                        <div>
+                            <a href="/preoccupation/taches-pigmentaires">
+                                <ImageCard
+                                    src={tachesPigmentairesBG}
+                                    alt=""
+                                    title="Taches pigmentaires"
+                                />
+                            </a>
+                            <p class="text-muted-foreground">
+                                Les taches pigmentaires sont une anomalie
+                            </p>
+                        </div>
+                        <div>
+                            <a href="/preoccupation/teint-terne">
+                                <ImageCard
+                                    src={teintTerneBG}
+                                    alt=""
+                                    title="Teint terne"
+                                />
+                            </a>
+                            <p class="text-muted-foreground">
+                                La peau déshydratée n’a pas assez d’eau dans le
+                                derme
+                            </p>
+                        </div>
+                        <div>
+                            <a href="/preoccupation/telangiectasies">
+                                <ImageCard
+                                    src={telangiectasiesBG}
+                                    alt=""
+                                    title="Télangiectasies"
+                                />
+                            </a>
+                            <p class="text-muted-foreground">
+                                Les télangiectasies sont le symptôme de troubles
+                                de la circulation sanguine
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <CustomSeparator />
+
+                <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+                    <h2 id="corps" class="text-4xl">Corps</h2>
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+                    >
+                        <div>
+                            <a href="/preoccupation/acne">
+                                <ImageCard src={acneBG} alt="" title="Acné" />
+                            </a>
+                            <p class="text-muted-foreground">
+                                L’acné est une maladie inflammatoire de la peau
+                            </p>
+                        </div>
+                        <div>
+                            <a href="/preoccupation/cellulite">
+                                <ImageCard
+                                    src={celluliteBG}
+                                    alt=""
+                                    title="Cellulite"
+                                />
+                            </a>
+                            <p class="text-muted-foreground">
+                                La cellulite, aussi appelée “peau d’orange”
+                            </p>
+                        </div>
+                        <div>
+                            <a href="/preoccupation/cicatrices">
+                                <ImageCard
+                                    src={cicatricesBG}
+                                    alt=""
+                                    title="Cicatrices"
+                                />
+                            </a>
+                            <p class="text-muted-foreground">
+                                La cicatrisation fait partie du processus de
+                                guérison
+                            </p>
+                        </div>
+                        <div>
+                            <a href="/preoccupation/pilosite">
+                                <ImageCard
+                                    src={pilositeBG}
+                                    alt=""
+                                    title="Pilosité"
+                                />
+                            </a>
+                            <p class="text-muted-foreground">
+                                Oubliez le rasage, oubliez l'épilation
+                            </p>
+                        </div>
+                        <div>
+                            <a href="/preoccupation/relachement-cutane">
+                                <ImageCard
+                                    src={relachementCutaneBG}
+                                    alt=""
+                                    title="Relâchement cutané"
+                                />
+                            </a>
+                            <p class="text-muted-foreground">
+                                Avec l’âge, la peau de chaque individu
+                                s’amincit, s’assèche et perd en élasticité
+                            </p>
+                        </div>
+                        <div>
+                            <a href="/preoccupation/taches-pigmentaires">
+                                <ImageCard
+                                    src={tachesPigmentairesBG}
+                                    alt=""
+                                    title="Taches pigmentaires"
+                                />
+                            </a>
+                            <p class="text-muted-foreground">
+                                Les taches pigmentaires sont une anomalie
+                            </p>
+                        </div>
+                        <div>
+                            <a href="/preoccupation/varices">
+                                <ImageCard
+                                    src={varicesBG}
+                                    alt=""
+                                    title="Varices"
+                                />
+                            </a>
+                            <p class="text-muted-foreground">
+                                On parle de varices lorsque des veines forment
+                                un relief apparent sous la peau
+                            </p>
+                        </div>
+                        <div>
+                            <a href="/preoccupation/vergetures">
+                                <ImageCard
+                                    src={vergeturesBG}
+                                    alt=""
+                                    title="Vergetures"
+                                />
+                            </a>
+                            <p class="text-muted-foreground">
+                                Ces fines lignes, qui peuvent ressembler à des
+                                zébrures
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

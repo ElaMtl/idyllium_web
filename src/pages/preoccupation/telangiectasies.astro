@@ -1,0 +1,198 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import telangiectasiesBG from "@/images/telangiectasies-bg.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import Card from "@/components/Card.astro";
+import GradientSection from "@/components/GradientSection.astro";
+import ImageCard from "@/components/ImageCard.astro";
+import telangiectasies from "@/images/telangiectasies.webp";
+import laserIcon from "@/images/laser.webp";
+import CardList from "@/components/CardList.astro";
+import sclerotherapie from "@/images/sclerotherapie.webp";
+import PageBackground from "@/components/PageBackground.astro";
+---
+
+<Layout
+    language="fr"
+    title="Télangiectasies | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/preoccupation/telangiectasies"
+    alternateHref="/en/concern/telangiectasies"
+>
+    <main>
+        <PageBackground
+            src={telangiectasiesBG.src}
+            section="Préoccupation"
+            title="Télangiectasies"
+        />
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <div class="text-center p-5 md:p-8 lg:p-12 max-w-9xl container">
+                <h2 class="uppercase font-black py-5">
+                    Les télangiectasies, qu’est-ce que c’est?
+                </h2>
+                <p class="text-muted-foreground">
+                    <span
+                        >Les télangiectasies sont le symptôme de troubles de la
+                        circulation sanguine.
+                    </span>
+                    <span class="block"
+                        >Quand les veines profondes n'assurent pas bien leurs
+                        fonctions, de petits vaisseaux plus proches de la
+                        surface de la peau prennent le relais. Ils se dilatent
+                        et deviennent plus visibles.
+                    </span>
+                    <span class="block"
+                        >Les télangiectasies sont des dilatations permanentes de
+                        très petites veines d’un diamètre compris entre 0.1 à 1
+                        millimètre.
+                    </span>
+                    <span class="block"
+                        >Elles sont situées près la surface de la peau et sont
+                        de couleur rouge, bleue ou violette.
+                    </span>
+                    <span class="block"
+                        >Plus fréquemment situées sur les jambes, elles peuvent
+                        également apparaître sur d’autres zones du corps
+                    </span>
+                    <span class="block"
+                        >Par exemple sur le visage, au niveau du nez, des joues
+                        ou du menton, sur la nuque ou sur le bas du dos.Elles
+                        sont plus présentes chez la femme que chez l'homme avant
+                        l’âge de 50 ans, mais après 60 ans la plupart des
+                        personnes sont porteuses de télangiectasies de façon
+                        équivalente chez les femmes et les hommes.
+                    </span>
+                </p>
+            </div>
+
+            <CustomSeparator />
+
+            <h2 class="uppercase font-black py-5 text-center">
+                Qu’est-ce qui peut causer les télangiectasies?
+            </h2>
+            <div
+                class="grid grid-cols-1 lg:grid-cols-3 gap-12 py-28 text-white text-center"
+            >
+                <Card
+                    title=""
+                    description="Il peut s’agir d’une fragilité des petits vaisseaux superficiels ou les télangiectasies peuvent être le symptôme d’une insuffisance veineuse superficielle et peuvent s’associer à des varices plus ou moins importantes."
+                />
+                <Card
+                    title=""
+                    description="Certaines télangiectasies très fines et regroupées peuvent apparaître suite à un traumatisme au niveau de la peau ou un geste thérapeutique sur une veine (chirurgie par exemple)."
+                />
+                <CardList
+                    title="Certains facteurs favorisent l’apparition des télangiectasies:"
+                    descriptions={[
+                        "l’âge",
+                        "l’hérédité",
+                        "les variations de poids rapides",
+                        "le surpoids",
+                        "les modifications hormonales lors de la grossesse ou de la ménopause",
+                        "etc.",
+                    ]}
+                />
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        Comment peut-on prévenir les télangiectasies?
+                    </h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            Tout d’abord, il est important de faire de
+                            l’exercice pour éviter les problèmes de circulation
+                            sanguine. Une activité physique comme le vélo, la
+                            marche, la natation ont des effets bénéfiques sur le
+                            réseau sanguin.
+                        </span>
+                        <span class="block"
+                            >Parlant de stimulation de circulation, l’eau froide
+                            le fait très bien, et au contraire, il faut éviter
+                            les saunas, les bains chauds, les jacuzzis, etc.
+                        </span>
+                        <span class="block"
+                            >Pour continuer, il faut prendre l’habitude de
+                            constamment changer de position, de se dégourdir et
+                            de s’étirer.
+                        </span>
+                        <span class="block"
+                            >Le port de vêtements amples est un bon moyen de
+                            prévenir les télangiectasies sur le corps.
+                        </span>
+                        <span class="block"
+                            >Dernièrement, il est recommandé d’utiliser un
+                            protecteur solaire, pour protéger la peau fragile du
+                            visage, mais aussi pour aider à prévenir
+                            l'apparition de ces veines en forme d'araignée sur
+                            les jambes, les mollets et les chevilles à mesure
+                            que l’on vieillit.
+                        </span>
+                    </p>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={telangiectasies}
+                                alt="telangiectasies"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <GradientSection
+            title="Vous souffrez de télangiectasies?"
+            description="La Clinique Idyllium vous propose différents traitements contre taches pigmentaires. Réservez une consultation gratuite avec nos spécialistes pour vous trouver un plan de traitement efficace adapté à votre peau."
+            buttonText="Réservez une consultation"
+            href="#"
+        />
+
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <h1 class="text-center uppercase my-5">
+                Qu'offrons-nous pour traiter les télangiectasies?
+            </h1>
+            <h2 class="uppercase text-center">Nos solutions</h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+            >
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={laserIcon}
+                            alt=""
+                            title="IPL Thérapie au laser Icon®"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Rajeunissement et correction des imperfections de la
+                        peau
+                    </p>
+                </div>
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={sclerotherapie}
+                            alt=""
+                            title="Sclérothérapie"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Améliorez l'apparence de vos veines
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

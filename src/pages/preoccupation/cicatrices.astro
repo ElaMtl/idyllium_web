@@ -1,0 +1,189 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import cicatricesBG from "@/images/cicatrices-bg.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import Card from "@/components/Card.astro";
+import GradientSection from "@/components/GradientSection.astro";
+import ImageCard from "@/components/ImageCard.astro";
+import peeling from "@/images/peeling_chimique.webp";
+import belaMD from "@/images/bela-md.webp";
+import laser from "@/images/laser.webp";
+import cicatrice from "@/images/cicatrice.webp";
+import PageBackground from "@/components/PageBackground.astro";
+---
+
+<Layout
+    language="fr"
+    title="Cicatrices | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/preoccupation/cictraces"
+    alternateHref="/en/concern/scars"
+>
+    <main>
+        <PageBackground
+            src={cicatricesBG.src}
+            section="Préoccupation"
+            title="Cicatrices"
+        />
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <div class="text-center p-5 md:p-8 lg:p-12 max-w-9xl container">
+                <h2 class="uppercase font-black py-5">
+                    Les cicatrices, qu’est-ce que c’est?
+                </h2>
+                <p class="text-muted-foreground">
+                    <span
+                        >La cicatrisation fait partie du processus de guérison.
+                        Les cicatrices c'est ce qui se forme sur la peau lorsque
+                        celle-ci se répare. Elles apparaissent suite à une
+                        rupture du tissu de la peau, comme une blessure, une
+                        chirurgie, une brûlure, un bouton mal extrait, etc.
+                    </span>
+                    <span class="block"
+                        >À part les très petites lésions, chaque blessure cause
+                        une cicatrice. Le tissu qui se forme pour réparer la
+                        peau n’est pas identique à celui qu’il remplace et qui
+                        l’entoure. Ce tissu est habituellement “moins
+                        fonctionnel”, cela signifie qu’il est plus sensible à
+                        certains facteurs, comme le soleil, qu’il est plus
+                        rigide et que les glandes sudoripares et les poils ne se
+                        développent plus sous la cicatrice.</span
+                    >
+                    <span class="block"
+                        >D'ailleurs, comme le tissu des cicatrices se
+                        différencie de la peau, il est aussi visible, ce qui est
+                        tout à fait normal, mais peut gêner certaines personnes.</span
+                    >
+                </p>
+            </div>
+
+            <CustomSeparator />
+
+            <h2 class="uppercase font-black py-5 text-center">
+                Quels sont les types des cicatrices?
+            </h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-28 text-white text-center"
+            >
+                <Card
+                    title=""
+                    description="Celles plates ou blanches sont les plus courantes, tout le monde en a ou en a eu. Si au départ elles peuvent avoir une apparence rouge et/ou en relief, la cicatrice s’estompe généralement avec le temps jusqu’à devenir dans certains cas quasiment invisible. Même si ce n’est pas le cas, cette marque reste en général discrète."
+                />
+                <Card
+                    title=""
+                    description="Les cicatrices atrophiques sont celles qui sont creusées dans la peau. Ce genre de cicatrices a un peu de mal à s’estomper avec le temps et souvent reste rougeâtre. Elles sont fréquentes suite à des cas d’acné sévère et la varicelle. Souvent nous mêmes en sommes la cause! Quand nous grattons des boutons ou arrachons des croûtelles nous interrompons le processus de cicatrisation ce qui laisse une marque."
+                />
+                <Card
+                    title=""
+                    description="Celles en chéloïdes ont un relief rougeâtre qui s’étend irrégulièrement autour de la plaie d’origine, on dit qu’elles ont la forme “chou-fleur”. Ces cicatrices font apparition lors d’une extension causée par l’excroissance d’une couche plus profonde de la peau durant la cicatrisation. Ce type est vu plus souvent chez les enfants et sur les peaux foncées, aussi les femmes enceintes ont un risque que cette cicatrice s’aggrave pendant la grossesse."
+                />
+                <Card
+                    title=""
+                    description="Les cicatrices étirées sont longues et légèrement creusées. Elles surviennent quand l’élasticité de la peau atteint sa limite lors d’un étirement. Les vergetures sont les cicatrices les plus connues de ce type."
+                />
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        Comment peut-on prévenir les cicatrices?
+                    </h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            Bien sûr il faut faire attention à nous mêmes et
+                            prendre soin de soi pour éviter de se blesser, pour
+                            atténuer les conditions de peau difficiles, pour
+                            contrôler notre poids, etc, mais au sujet des
+                            cicatrices ce n’est pas toujours la solution.
+                        </span>
+                        <span class="block"
+                            >La plupart du temps on ne peut pas vraiment
+                            prévenir les cicatrices, car généralement elles
+                            surviennent suite à une cause hors de notre
+                            contrôle, comme une coupure, une brûlure, l’acné
+                            sévère, une poussée de croissance trop rapide, etc,
+                            ou suite à un soin nécessaire ou désiré, comme une
+                            chirurgie ou un perçage.
+                        </span>
+                        <span class="block"
+                            >Par contre, lorsqu’une rupture de la peau a lieu,
+                            nous pouvons en prendre soin pour minimiser la
+                            cicatrice et augmenter les chances qu’elle parte
+                            éventuellement.
+                        </span>
+                    </p>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={cicatrice}
+                                alt="cicatrice"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <GradientSection
+            title="Vous avez des cicatrices?"
+            description="La Clinique Idyllium vous propose différents traitements pour les cicatrices. Réservez une consultation gratuite avec nos spécialistes pour vous trouver un plan de traitement efficace adapté à votre peau."
+            buttonText="Réservez une consultation"
+            href="#"
+        />
+
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <h1 class="text-center uppercase my-5">
+                Qu'offrons nous pour traiter les cicatrices?
+            </h1>
+            <h2 class="uppercase text-center">Nos solutions</h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+            >
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={laser}
+                            alt=""
+                            title="IPL Thérapie au laser Icon®"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Rajeunissement et correction des imperfections de la
+                        peau
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard src={belaMD} alt="" title="Bela MD" />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Pour une peau clarifiée, rafraîchie et lumineuse
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard
+                            src={peeling}
+                            alt=""
+                            title="Peeling chimique"
+                        />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Améliorez l’apparence de votre peau
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

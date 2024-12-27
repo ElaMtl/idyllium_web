@@ -1,0 +1,174 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import fotonaAcneBG from "@/images/fotona-acne-bg.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import PageBackground from "@/components/PageBackground.astro";
+import fotonaAcne from "@/images/fotona-acne.webp";
+import resultats from "@/images/resultats-fotona-acne.jpg";
+import acneBG from "@/images/acne-bg.webp";
+import cicatricesBG from "@/images/cicatrices-bg.webp";
+import ImageCard from "@/components/ImageCard.astro";
+---
+
+<Layout
+    language="fr"
+    title="Traitement au laser de l’acné et des cicatrices d’acné | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/traitement/traitement-au-laser-de-lacne-et-des-cicatrices-dacne"
+    alternateHref="/en/treatment/nightlase-laser-treatment-for-snoring"
+>
+    <main>
+        <PageBackground
+            src={fotonaAcneBG.src}
+            section="Traitement"
+            title="Traitement au laser de l’acné et des cicatrices d’acné"
+            subtitle="Obtenir une peau claire et uniforme"
+        />
+        <div class="p-5 md:p-8 lg:p-12 w-full">
+            <h1 class="p-5 uppercase text-center">Acné : De quoi s’agit-il?</h1>
+            <p class="!leading-10 text-muted-foreground">
+                L’acné est une maladie commune de la peau qui touche de
+                nombreuses personnes au cours de leur vie. De nombreux facteurs
+                peuvent être à l’origine de ce cycle complexe et perpétuel,
+                entrainant une fluctuation hormonale qui stimule la production
+                d’huile. Ce phénomène est plus courant chez les adolescents,
+                mais peut toucher des personnes de tous âges, plus ou moins
+                sévèrement. Trop souvent, les personnes touchées tripotent leurs
+                boutons et imperfections en raison de leur aspect disgracieux.
+                Malheureusement, cette habitude peut accroître l’inflammation
+                et, dans des cas extrêmes, laisser des cicatrices permanentes.
+            </p>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        Comment le traitement au laser peut-il aider à faire
+                        disparaître mon acné?
+                    </h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            Le traitement au laser de Fotona réduit
+                            l’inflammation de l’acné grâce à l’absorption
+                            photo-sélective et à un système de chauffage
+                            contrôlé. Le laser pénètre la peau en toute sécurité
+                            jusqu’à atteindre une profondeur optimale de
+                            traitement permettant de détruire thermiquement les
+                            glandes sébacées suractives ciblées. De plus, le
+                            traitement accélère le processus de guérison et
+                            stimule le remodelage du collagène, une étape
+                            importante dans le traitement de l’acné sur le long
+                            terme.
+                        </span>
+                    </p>
+                    <h3>Et si j’ai des cicatrices d’acné?</h3>
+                    <p class="text-muted-foreground">
+                        <span>
+                            Le traitement au laser de Fotona est idéal pour
+                            favoriser la disparition de légères cicatrices. Il
+                            pénètre la peau de manière sécuritaire et efficace
+                            afin de faire délicatement ressortir la peau marquée
+                            par l’acné, ce qui aide à améliorer son grain et sa
+                            couleur. Contrairement aux exfoliations chimiqueset
+                            à la dermabrasion, le relissage de la peau au laser
+                            permet au praticien de contrôler précisément la
+                            profondeur de la pénétration du laser. Le laser
+                            vaporise délicatement de fines couches d’une
+                            épaisseur inférieure à 1 micron de la surface
+                            marquée par l’acné afin de révéler la peau saine et
+                            intacte qui se trouve en dessous.
+                        </span>
+                    </p>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={fotonaAcne}
+                                alt="Fotona Acne"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <CustomSeparator />
+
+            <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+                <h1 class="text-center uppercase my-5">
+                    Pourquoi choisir ce traitement?
+                </h1>
+                <h2 class="uppercase text-center">
+                    Pour répondre à ces préoccupations
+                </h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-28"
+                >
+                    <div>
+                        <a href="#">
+                            <ImageCard src={acneBG} alt="" title="Acné" />
+                        </a>
+                        <p class="text-muted-foreground">
+                            L’acné est une maladie inflammatoire de la peau
+                        </p>
+                    </div>
+
+                    <div>
+                        <a href="#">
+                            <ImageCard
+                                src={cicatricesBG}
+                                alt=""
+                                title="Cicatrices"
+                            />
+                        </a>
+                        <p class="text-muted-foreground">
+                            La cicatrisation fait partie du processus de
+                            guérison
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">Vos résultats</h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            Un cycle complet de NightLase se compose de trois
+                            séances de traitement distinctes en l'espace de six
+                            semaines. Dès la première nuit suivant votre premier
+                            traitement, vous devriez constater une réduction de
+                            vos ronflements. Cette réduction s'accentuera au
+                            cours du premier mois. Il s'avère que les résultats
+                            définitifs du traitement durent jusqu'à un an, et la
+                            thérapie peut être répétée.Avec le NightLase®, vous
+                            pouvez enfin avoir un sommeil réparateur.
+                        </span>
+                    </p>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={resultats}
+                                alt="resultats"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

@@ -1,0 +1,121 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import fotonaNightlaseBG from "@/images/fotona-nightlase-bg.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import PageBackground from "@/components/PageBackground.astro";
+import fotonaNightlaseVideo from "@/videos/fotona-nightlase.mp4";
+import resultats from "@/images/fotona-nightlase-resultats.jpg";
+---
+
+<Layout
+    language="fr"
+    title="Fotona's NightLase® | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/traitement/traitement-au-laser-nightlase-contre-les-ronflements"
+    alternateHref="/en/treatment/nightlase-laser-treatment-for-snoring"
+>
+    <main>
+        <PageBackground
+            src={fotonaNightlaseBG.src}
+            section="Traitement"
+            title="Nightlase®"
+            subtitle="Traitement au laser des ronflements"
+        />
+        <div class="p-5 md:p-8 lg:p-12 w-full">
+            <h1 class="p-5 uppercase text-center">De quoi s’agit-il?</h1>
+            <p class="!leading-10 text-muted-foreground">
+                Le NightLase® de Fotona est un traitement au laser Er :YAG non
+                invasif et indolore qui va créer un effet de resserrement des
+                tissus muqueux oraux. Ceci va permettre une ouverture constante
+                des voies respiratoires. Cette technologie va laisser place à la
+                réduction des effets de l’apnée du sommeilainsi que l’amplitude
+                du ronflement. À la suite d’un seul traitement effectué par une
+                technicienne spécialisée , la majorité des patients observent
+                une amélioration rapide et durable.
+            </p>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        Comment cela fonctionne?
+                    </h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            Le traitement Bela MD commence par une
+                            microdermabrasion au diamant, suivie d'une eau
+                            hydrogène, d'une stimulation musculaire, d'une
+                            infusion de sérum et d'une électroporation.
+                        </span>
+                        <span class="block"
+                            >Pendant le traitement, la couche superficielle de
+                            la peau est exfoliée, la peau est profondément
+                            hydratée et infusée d'ingrédients puissants. Le
+                            visage et le cou sont stimulés pour un effet
+                            tonifiant et liftant.
+                        </span>
+                        <span class="block"
+                            >Des sérums de traitement personnalisables sont
+                            utilisés pour cibler les besoins uniques de chaque
+                            patient.
+                        </span>
+                    </p>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <video
+                                class="relative aspect-video object-contain"
+                                controls
+                                src={fotonaNightlaseVideo}
+                            >
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">Vos résultats</h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            Un cycle complet de NightLase se compose de trois
+                            séances de traitement distinctes en l'espace de six
+                            semaines. Dès la première nuit suivant votre premier
+                            traitement, vous devriez constater une réduction de
+                            vos ronflements. Cette réduction s'accentuera au
+                            cours du premier mois. Il s'avère que les résultats
+                            définitifs du traitement durent jusqu'à un an, et la
+                            thérapie peut être répétée.Avec le NightLase®, vous
+                            pouvez enfin avoir un sommeil réparateur.
+                        </span>
+                    </p>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={resultats}
+                                alt="resultats"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

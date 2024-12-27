@@ -1,0 +1,207 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import corps from "@/images/corps.webp";
+import face from "@/images/face.webp";
+import epilation from "@/images/epilation.webp";
+import produits from "@/images/produits.webp";
+import analyse_peau from "@/images/analyse_peau.webp";
+import Image from "astro/components/Image.astro";
+import ImageCard from "@/components/ImageCard.astro";
+import clinique2 from "@/images/clinique2.webp";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import home2Video from "@/videos/home2_compressed.mp4";
+import after_home from "@/images/after_home.webp";
+import before_home from "@/images/before_home.webp";
+import ImageComparison from "@/components/ImageComparison.astro";
+import videoframe_home2 from "@/images/videoframe_home2.webp";
+import Button from "@/components/Button.astro";
+import HomePageBackground from "@/components/HomePageBackground.astro";
+---
+
+<Layout
+    language="fr"
+    title="Clinique Idyllium - Soins de Santé et Bien-Être à Vaudreuil"
+    description="Bienvenue à Clinique Idyllium à Vaudreuil. Soins de santé de qualité et bien-être personnalisés."
+    keywords="Clinique Idyllium, Soins de santé, Bien-être, Vaudreuil, Services médicaux, Soins personnalisés, Santé et bien-être, Clinique à Vaudreuil, Soins de qualité"
+    currentHref="/"
+    alternateHref="/en"
+>
+    <main>
+        <HomePageBackground
+            title="Clinique Idyllium"
+            subtitle="L'excellence en médico-esthéthique"
+            description="Vous méritez la meilleure approche et la meilleure solution!"
+        />
+        <div class="p-5 md:p-8 lg:p-12 max-w-9xl container">
+            <h1 class="p-5 uppercase text-center">
+                Notre objectif est de vous guider tout au long de votre parcours
+                beauté
+            </h1>
+
+            <p class="p-5 text-center !leading-10 text-muted-foreground">
+                L’écoute et le dialogue sont au cœur de l’expérience chez nous.
+                Cette approche singulière garantit l’expression de la réalité et
+                des besoins de chaque femme ou homme, et permet à nos
+                spécialistes de proposer plus qu’un soin, un accompagnement
+                personnalisé et des produits adaptés.
+            </p>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-28"
+            >
+                <div>
+                    <a href="/preoccupation/#visage">
+                        <ImageCard src={face} alt="" title="Visage" />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Rajeunissement et lifting du visage
+                    </p>
+                </div>
+                <div>
+                    <a href="/preoccupation/#corps">
+                        <ImageCard src={corps} alt="" title="Corps" />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Remodelage et raffermissement du corps
+                    </p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard src={epilation} alt="" title="Épilation" />
+                    </a>
+                    <p class="text-muted-foreground">Épilation definitive</p>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <ImageCard src={produits} alt="" title="Produits" />
+                    </a>
+                    <p class="text-muted-foreground">
+                        Nos gammes de produits pour tout type de peau
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full">
+                <div class="flex flex-row justify-center order-1 md:order-1">
+                    <Image
+                        class="object-contain p-3"
+                        src={analyse_peau}
+                        alt="analyse de la peau"
+                    />
+                </div>
+
+                <div
+                    class="flex flex-col justify-center order-1 md:order-none p-3"
+                >
+                    <h2 class="uppercase font-black py-5">
+                        L'analyse de la peau
+                    </h2>
+                    <p class="text-muted-foreground">
+                        <span
+                            >La Clinique Idyllium vous propose des moyens
+                            innovants de se sentir en sécurité lorsque vous
+                            recevez vos traitements esthétiques. Avoir des
+                            méthodes spécialement conçues pour vous vous offre
+                            le traitement compatible avec votre peau !
+                        </span>
+                        <span class="block"
+                            >Nous vous proposons le lecteur de mélanine
+                            Skintel® Melanin Reader™, approuvé par la FDA,
+                            pour vous aider à organiser des traitements pour
+                            vous !</span
+                        >
+                    </p>
+                    <div class="flex items-center justify-center py-20">
+                        <Button href="#" text="En savoir plus" />
+                    </div>
+                </div>
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={clinique2}
+                                alt="clinique"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        La clinique Idyllium
+                    </h2>
+                    <h3 class="text-muted-foreground py-5">
+                        Clinique médico-esthétique de rajeunissement et
+                        raffermissement cutané
+                    </h3>
+                    <p class="text-muted-foreground">
+                        <span>
+                            Notre Clinique était créé avec le but d’offrir des
+                            services médico-esthétique, mais, avant tout, la
+                            possibilité de régler des problèmes. Souvent les
+                            gens ne savent pas nécessairement de quoi exactement
+                            ils ont besoin, et même quand ils en ont une idée,
+                            ce qu’ils ont en tête n’est pas toujours la
+                            meilleure solution pour eux. Notre but est vraiment
+                            de trouver la meilleure solution pour chaque
+                            personne qui en a besoin!
+                        </span>
+                        <span class="block">
+                            À la clinique Idyllium vous obtenez de beaux
+                            résultats naturels en choisissant une approche 360°.
+                            Vous collaborez avec des professionnels honnêtes qui
+                            sauront ne pas seulement vous écouter attentivement,
+                            mais bien étudier votre profil pour vous aider à
+                            atteindre les meilleurs résultats qui soient.
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <CustomSeparator />
+
+            <h1 class="uppercase font-extralight py-2 text-center">
+                Nos Galeries
+            </h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-center">
+                <div class="flex flex-col p-3">
+                    <h2 class="text-xl font-light mb-4">
+                        Une photo vaut mille mots
+                    </h2>
+                    <div class="w-full">
+                        <ImageComparison
+                            src1={before_home}
+                            alt1={"avant la chirurgie"}
+                            src2={after_home}
+                            alt2={"après la chirurgie"}
+                        />
+                    </div>
+                </div>
+                <div class="flex flex-col p-3">
+                    <h2 class="text-xl font-light mb-4">
+                        Voir notre traitement en action
+                    </h2>
+                    <div class="w-full">
+                        <video
+                            class="aspect-video object-contain"
+                            controls
+                            src={home2Video}
+                            poster={videoframe_home2.src}
+                            preload="none"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

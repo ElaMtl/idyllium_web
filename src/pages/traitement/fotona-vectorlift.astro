@@ -1,0 +1,183 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/globals.css";
+import Image from "astro/components/Image.astro";
+import backgroundImage from "@/images/fotona-vectorlift-bg.jpg";
+import CustomSeparator from "@/components/CustomSeparator.astro";
+import PageBackground from "@/components/PageBackground.astro";
+import fotonaLiplase from "@/images/fotona-vectorlift.jpg";
+import resultats from "@/images/fotona-vectorlift-resultats.jpg";
+---
+
+<Layout
+    language="fr"
+    title="Fotona - VectorLift® | Clinique Idyllium, Vaudreuil"
+    description="Clinique Idyllium | Injections Botox Fillers | Vaudreuil-Dorion"
+    keywords="Clinique, Idyllium, esthétique médicale, rajeunissement, raffermissement cutané"
+    currentHref="/traitement/fotona-vectorlift"
+    alternateHref="/en/treatment/fotona-vectorlift"
+>
+    <main>
+        <PageBackground
+            src={backgroundImage.src}
+            section="Traitement"
+            title="Fotona - VectorLift®"
+        />
+        <div class="p-5 md:p-8 lg:p-12 w-full">
+            <h1 class="p-5 uppercase text-center">
+                Qu’est-ce que VectorLift® ?
+            </h1>
+            <p class="!leading-10 text-muted-foreground">
+                <span
+                    >VectorLift® est une solution innovante pour le lifting non
+                    invasif des sourcils et le rajeunissement des paupières
+                    supérieures. Ce protocole unique en 3 étapes permet
+                    d'améliorer l'esthétique péri-oculaire et sourcilière via
+                    l'élévation de la queue des sourcils et le resserrement des
+                    paupières supérieures. VectorLift® offre l'équilibre
+                    optimal entre le resserrement immédiat des tissus
+                    (contraction superficielle), la formation de nouveau
+                    collagène (rajeunissement à long terme) et l'utilisation de
+                    fluences confortables pour le patient sans créer d'effets
+                    secondaires indésirables. Ce protocole est confortable et
+                    non agressif, permettant aux patients de reprendre
+                    immédiatement leur routine normale.
+                </span>
+            </p>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        Comment fonctionne le traitement VectorLift®?
+                    </h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            VectorLift® est une procédure en 3 étapes qui étend
+                            la zone totale de traitement pour maximiser les
+                            vecteurs de lifting en combinant l'élévation des
+                            sourcils du front, le resserrement des paupières et
+                            le resserrement du cuir chevelu.
+                        </span>
+                        <span class="block"
+                            >La profondeur de pénétration de VectorLift® est
+                            particulièrement favorable aux soins du visage car
+                            elle préserve la graisse sous-cutanée, vitale pour
+                            l'intégrité du visage. L'utilisation de faibles
+                            fluences et d'un protocole d'hyperstacking produit
+                            une croissance plus profonde du collagène pour un
+                            resserrement amélioré tout en offrant une expérience
+                            confortable au patient en fournissant une
+                            augmentation progressive de la chaleur.
+                        </span>
+                    </p>
+                </div>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={fotonaLiplase}
+                                alt="Fotona Liplase"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <CustomSeparator />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full gap-10">
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative inline-block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 transform translate-x-3 translate-y-3 bg-[#EBD099]"
+                            >
+                            </div>
+                            <Image
+                                class="relative object-contain"
+                                src={resultats}
+                                alt="resultats"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center p-3">
+                    <h2 class="uppercase font-black py-2">
+                        Avantages du mode Fotona SMOOTH®
+                    </h2>
+                    <p class="text-muted-foreground">
+                        <span>
+                            VectorLift® est basé sur la technologie
+                            révolutionnaire d'impulsion du mode Fotona SMOOTH®,
+                            qui a fait ses preuves en tant que solution
+                            puissante et efficace pour chauffer et stimuler le
+                            renouvellement du collagène superficiel et plus
+                            profond en utilisant une modalité d'impulsion
+                            brevetée. Le mode innovant FotonaSMOOTH® traite la
+                            peau d'une manière non ablative douce, presque «
+                            semblable à une plume », sans saignement et avec un
+                            dépôt de température précisément contrôlé. L'énergie
+                            optique est délivrée dans une séquence d'impulsions
+                            unique d'une durée inférieure à la seconde qui
+                            empêche l'accumulation de température à la surface
+                            et permet d'obtenir un chauffage homogène à
+                            plusieurs centaines de micromètres du tissu.
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="container text-center mt-16">
+                <h2 class="uppercase font-black py-2">
+                    Premiers pas avec VectorLift®
+                </h2>
+                <p class="text-muted-foreground">
+                    <span>
+                        La formation à VectorLift® est dispensée par l'Académie
+                        Laser et Santé dans le cadre d'un atelier de formation
+                        aux traitements esthétiques mini-invasifs de Fotona,
+                        sous la direction d'experts en technologie laser
+                        médicale. Cet atelier approfondi, au cours duquel les
+                        participants participeront à des démonstrations en
+                        direct et acquerront une compréhension approfondie de
+                        l'interaction laser-tissus, fournira les informations
+                        nécessaires sur les principes fondamentaux des
+                        traitements esthétiques non invasifs et d'autres
+                        procédures pouvant être réalisées avec les systèmes
+                        laser Fotona.
+                    </span>
+                    <span class="block"
+                        >Les systèmes laser à double longueur d'onde suivants de
+                        Fotona sont idéaux pour VectorLift® ainsi qu'une large
+                        gamme d'autres traitements de resurfaçage et de
+                        rajeunissement de la peau :
+                    </span>
+                    <span class="block"
+                        >Le système multi-applications Dynamis Pro de Fotona
+                        fournit une solution unique, unique et complète offrant
+                        la puissance des lasers Er:YAG et Nd:YAG ultra-hautes
+                        performances, idéales pour une large gamme
+                        d'applications en esthétique et en dermatologie. Le SP
+                        Dynamis comprend également un laser chirurgical QCW
+                        Nd:YAG supplémentaire pour la lipolyse et de nombreuses
+                        autres procédures chirurgicales.
+                    </span>
+                    <span class="block"
+                        >Le TimeWalker® Fotona4D® est un laser esthétique
+                        Er:YAG et Nd:YAG de nouvelle génération dédié aux
+                        traitements esthétiques du visage. Avec une combinaison
+                        unique de la technologie laser avancée de Fotona et des
+                        modes de traitement exclusifs alimentés par ASP,
+                        TimeWalker® est conçu et optimisé pour les procédures
+                        de lifting non invasives telles que Fotona4D®,
+                        Fotona4D®Men, SmoothEye®, VectorLift® et LipLase®.
+                    </span>
+                </p>
+            </div>
+        </div>
+    </main>
+</Layout>
